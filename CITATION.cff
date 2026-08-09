@@ -1,8 +1,9 @@
 cff-version: 1.2.0
-message: "If you use this private research candidate, cite it using the provisional metadata below; replace the version and add a DOI only after release."
+message: "If you use this research release, cite it using the metadata below."
 title: "A spectral characterization of the random series-parallel distance exponent"
 type: software
-version: 0.1.0-private-candidate
+version: 1.0.0
+date-released: 2026-08-09
 repository-code: "https://github.com/DannyExperiments/random-series-parallel-distance-exponent"
 authors:
   - name: "DannyExperiments"

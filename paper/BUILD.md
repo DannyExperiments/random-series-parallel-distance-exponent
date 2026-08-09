@@ -7,9 +7,10 @@ paper/manuscript.tex
 paper/references.bib
 ```
 
-Use `amsart`, `a4paper`, and one-inch margins. Use no author entry until the
-human approves authorship. Keep the abstract to at most six sentences and
-make the actual problem and answer clear on page one.
+Use `amsart`, `a4paper`, and one-inch margins. The frozen manuscript
+deliberately has no author entry; repository citation metadata records the
+approved `DannyExperiments` convention. Keep the abstract to at most six
+sentences and make the actual problem and answer clear on page one.
 
 The intended offline build command, once the required Tectonic resource bundle
 is available, is:

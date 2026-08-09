@@ -35,7 +35,7 @@ jobs:
           if grep -Eq 'There were undefined references|Citation .* undefined|Reference .* undefined|multiply defined|Overfull \\hbox|Overfull \\vbox|Underfull \\hbox|Underfull \\vbox|^!' paper/manuscript.log; then
             exit 1
           fi
-      - name: Upload manuscript PDF for private inspection
+      - name: Upload manuscript PDF for inspection
         uses: actions/upload-artifact@ea165f8d65b6e75b540449e92b4886f43607fa02 # v4.6.2
         with:
           name: manuscript-pdf

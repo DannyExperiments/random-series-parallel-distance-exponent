@@ -1,4 +1,4 @@
-# Public-candidate manifest
+# Public release manifest
 
 Generated from the sanitized allowlist. Raw/private evidence is excluded.
 
@@ -44,15 +44,22 @@ Generated from the sanitized allowlist. Raw/private evidence is excluded.
 - `paper/manuscript.pdf`
 - `paper/references.bib`
 - `proof/CANONICAL_REPAIRED_PROOF_V1.md`
+- `release/BADGE_ACTIVATION.md`
+- `release/HUMAN_RELEASE_CHECKLIST.md`
 - `release/README.md`
-- `release/RELEASE_NOTES.md`
+- `release/EVIDENCE_BUNDLE.sha256`
+- `release/EVIDENCE_BUNDLE.zip`
+- `release/RELEASE_ASSET_SHA256SUMS.txt`
+- `release/RELEASE_NOTES_v1.0.0.md`
+- `scripts/build_evidence_bundle.py`
 - `scripts/scan_public_tree.sh`
+- `scripts/update_hashes.py`
 - `scripts/verify_public_repo.sh`
 - `verification/README.md`
 - `verification/logs/README.md`
 - `verification/src/verify_claim_boundaries.py`
 
 `SHA256SUMS.txt` hashes every regular file except itself. The manuscript TeX is
-a designated private candidate with source QA and hostile source-level audit
+the designated release source and has source QA and hostile source-level audit
 `PASS`. The exact private-branch build and frozen four-page PDF passed visual
 preflight; its public-default-branch badge remains withheld.

@@ -10,6 +10,18 @@ It verifies the checksum ledger, required files, claim-boundary language, and
 the absence of common private-path, raw-chat, credential, key, and email
 patterns. It establishes repository integrity, not mathematical correctness.
 
+The same command checks that `release/EVIDENCE_BUNDLE.zip`, its sidecar, and
+the release-asset ledger are byte-for-byte reproducible. To check that layer
+directly, run:
+
+```bash
+python3 -B scripts/build_evidence_bundle.py --check
+```
+
+The archive contains an internal manifest, SHA-256 ledger, and replay README.
+It is a public-safe subset; raw audit transcripts and private receipts remain
+outside the repository.
+
 There is no load-bearing computation. The mathematical object to inspect is
 the symbolic draft in `proof/CANONICAL_REPAIRED_PROOF_V1.md`.
 

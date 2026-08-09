@@ -1,0 +1,3 @@
+b7756646862ca72ca317fbf50995f1827da84bc2debb4329b362c4180fb70964  paper/manuscript.pdf
+64c61b552b757c2f1c3aa9030056d09f7f742c0cb2e74aed176de70da57c4796  paper/manuscript.tex
+e73db78e485037c792d1c44e06b55f29b4e6797d979d2cdc7d3bca628550e0ec  release/EVIDENCE_BUNDLE.zip

@@ -17,6 +17,11 @@ required=(
   paper/PDF_PREFLIGHT.md paper/manuscript.pdf
   audits/public_safe_reports/PRIORITY_AUDIT_EXACT_RESULT_2026-08-09.md
   audits/public_safe_reports/PRIORITY_AUDIT_ARCHITECTURE_2026-08-09.md
+  scripts/build_evidence_bundle.py scripts/update_hashes.py
+  release/EVIDENCE_BUNDLE.zip release/EVIDENCE_BUNDLE.sha256
+  release/RELEASE_ASSET_SHA256SUMS.txt
+  release/BADGE_ACTIVATION.md release/HUMAN_RELEASE_CHECKLIST.md
+  release/RELEASE_NOTES_v1.0.0.md
 )
 
 for path in "${required[@]}"; do
@@ -44,6 +49,7 @@ if ! cmp -s "$expected_inventory" "$ledger_inventory"; then
 fi
 
 shasum -a 256 -c SHA256SUMS.txt
+python3 -B scripts/build_evidence_bundle.py --check
 python3 verification/src/verify_claim_boundaries.py
 bash scripts/scan_public_tree.sh
 

@@ -1,6 +1,6 @@
 # Manuscript lane
 
-`manuscript.tex` is the designated private manuscript candidate. It follows
+`manuscript.tex` is the designated release manuscript source. It follows
 the PRZ presentation standard: `amsart`, A4 paper, one-inch margins, no author
 entry, and a five-sentence abstract. Its first page states the original
 question, the new interior scope `p in (1/2,1)`, the direct characterization,
@@ -14,6 +14,6 @@ failure. Public-default-branch CI and anonymous badge testing remain separate
 release gates.
 
 Read `CLAIM_SCOPE_AND_LIMITATIONS.md`, `SOURCE_COMPARISON.md`, `SOURCE_QA.md`,
-and `BUILD_STATUS.md` before treating the source as a release candidate. The
+and `BUILD_STATUS.md` for the exact scope and build record. The
 frozen PDF is beside the exact TeX source and its preflight is recorded in
 `PDF_PREFLIGHT.md`.

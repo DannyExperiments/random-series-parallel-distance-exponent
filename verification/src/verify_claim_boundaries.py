@@ -13,10 +13,12 @@ required = {
         "visually inspected page by page",
     ],
     "STATUS.md": [
+        "PUBLIC_CANDIDATE_PASS_VISIBILITY_PENDING",
         "PASS_HIGH_CONFIDENCE",
         "PRIORITY_AUDIT_PASS_QUALIFIED",
         "FORMALIZATION_NOT_ATTEMPTED",
         "MANUSCRIPT_PASS_PRIVATE",
+        "ALL_RIGHTS_RESERVED",
     ],
     "CLAIMS_EVIDENCE_MATRIX.md": [
         "False attribution; forbidden",
@@ -31,6 +33,22 @@ required = {
         "PDF_COMPILED: YES",
         "PDF_VISUAL_PREFLIGHT: PASS",
         "PUBLIC_DEFAULT_BRANCH_BADGE_ELIGIBLE: NO",
+    ],
+    "CITATION.cff": [
+        "version: 1.0.0",
+        "date-released: 2026-08-09",
+        'name: "DannyExperiments"',
+    ],
+    "LICENSE_STATUS.md": [
+        "No repository-wide reuse license is granted. All rights are reserved.",
+    ],
+    "release/HUMAN_RELEASE_CHECKLIST.md": [
+        "Visibility changed to public and anonymously verified.",
+        "all rights reserved.",
+    ],
+    "release/RELEASE_NOTES_v1.0.0.md": [
+        "Release notes for Version 1.0.0",
+        "p\\in(1/2,1)",
     ],
 }
 
