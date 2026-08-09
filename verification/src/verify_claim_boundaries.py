@@ -101,7 +101,11 @@ def verify_visible_readme_images(readme_text: str) -> None:
     for badge in allowed_badges.values():
         unauthorized_image_surface = unauthorized_image_surface.replace(badge, "", 1)
 
-    if re.search(r"(?<!\\)!\[", unauthorized_image_surface):
+    # Reject the opener even when it is preceded by backslashes.  In
+    # CommonMark an even run of backslashes can leave the exclamation mark
+    # active, so a one-character negative lookbehind is not a safe visibility
+    # test.  This repository has no need to display image-syntax examples.
+    if re.search(r"!\[", unauthorized_image_surface):
         raise SystemExit("README contains an unauthorized visible Markdown image token")
     if re.search(r"<img\b", unauthorized_image_surface, flags=re.IGNORECASE):
         raise SystemExit("README contains an unauthorized visible HTML <img> element")
