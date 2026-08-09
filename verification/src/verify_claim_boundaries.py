@@ -12,12 +12,12 @@ required = {
         "No Lean or Aristotle badge is authorized",
         "exact designated source",
         "visually inspected page by",
-        "d79230cdb87d1438c97281d0c940f8e1a352642c",
+        "f5c3e0bb888a4e4b796b90729a6fc1cfa0581e96",
         "immutable Version",
     ],
     "STATUS.md": [
-        "PUBLIC_CANDIDATE_RUNNING",
-        "PUBLIC_MAIN_CI_PASS_METADATA_CLOSURE_PENDING",
+        "PUBLIC_MAIN_CI_PASS_RELEASE_PENDING",
+        "PRE_RELEASE_METADATA_REPAIR_RUNNING",
         "PASS_HIGH_CONFIDENCE",
         "PRIORITY_AUDIT_PASS_QUALIFIED",
         "FORMALIZATION_NOT_ATTEMPTED",
@@ -44,6 +44,7 @@ required = {
     ],
     "CITATION.cff": [
         "version: 1.0.0",
+        "date-released: 2026-08-09",
         'name: "DannyExperiments"',
     ],
     "LICENSE_STATUS.md": [
@@ -51,7 +52,7 @@ required = {
     ],
     "release/HUMAN_RELEASE_CHECKLIST.md": [
         "Repository visibility changed to public and anonymously verified.",
-        "both workflows re-pass on its exact public-`main` commit",
+        "passes both workflows on its exact PR head",
         "all rights reserved.",
     ],
     "release/RELEASE_NOTES_v1.0.0.md": [
@@ -114,8 +115,8 @@ def verify_visible_readme_images(readme_text: str) -> None:
 verify_visible_readme_images(readme)
 
 citation = (ROOT / "CITATION.cff").read_text(encoding="utf-8")
-if "date-released:" in citation:
-    raise SystemExit("pre-release CITATION.cff must not claim a release date")
+if "date-released: 2026-08-09" not in citation:
+    raise SystemExit("Version 1.0.0 CITATION.cff must record the release date")
 
 forbidden = [
     "we prove delta(1/2)=0",

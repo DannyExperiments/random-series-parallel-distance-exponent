@@ -2,9 +2,9 @@
 
 Status date: 2026-08-09.
 
-Current state: `PUBLIC_CANDIDATE_RUNNING`.
+Current state: `PUBLIC_MAIN_CI_PASS_RELEASE_PENDING`.
 
-Public repository gate: `PUBLIC_MAIN_CI_PASS_METADATA_CLOSURE_PENDING`.
+Public repository gate: `PRE_RELEASE_METADATA_REPAIR_RUNNING`.
 
 | Dimension | State | Exact meaning |
 |---|---|---|
@@ -19,9 +19,9 @@ Public repository gate: `PUBLIC_MAIN_CI_PASS_METADATA_CLOSURE_PENDING`.
 | Formalization | `FORMALIZATION_NOT_ATTEMPTED` | A dependency report and request packet exist; no Lean theorem has been proved. |
 | Human review | `PENDING` | No specialist or journal referee report is claimed. |
 | Repository visibility | `PUBLIC_ANONYMOUS_ACCESS_PASS` | The repository and its default `main` branch were opened successfully without authentication. |
-| Public-main CI | `PASS_AT_D79230C` | `Verify public evidence` run `31295518511` and `PDF build` run `31295518480` passed at exact public-`main` commit `d79230cdb87d1438c97281d0c940f8e1a352642c`. The new local closure tree has not yet been pushed and therefore has not yet received remote CI. |
+| Public-main CI | `PASS_AT_F5C3E0B` | `Verify public evidence` run `31302269010` and `PDF build` run `31302269014` passed at the exact pre-release public-`main` base commit `f5c3e0bb888a4e4b796b90729a6fc1cfa0581e96`. The metadata-only repair head must pass the same two checks before merge and release. |
 | Automation badges | `ACTIVE_PUBLIC_MAIN_PASS` | Exactly the verify and PDF badges are displayed in this closure tree; both image URLs and target pages were anonymously tested against public `main`. No Lean, Aristotle, or DOI badge is authorized. |
-| Branch protection | `PENDING_INDEPENDENT_CONFIRMATION` | No protection claim is made from local state or green workflow runs alone. |
+| Branch protection | `CONFIRMED_ACTIVE` | Authenticated GitHub settings show protection for `main`, with pull requests, the two required status checks, up-to-date branches, conversation resolution, linear history, administrator non-bypass, and force-push/deletion prevention enabled. |
 | Publication | `IMMUTABLE_RELEASE_PENDING` | No Version 1.0.0 tag or GitHub release has been created, and no release asset has been re-downloaded from an immutable release. |
 | DOI | `DOI_PENDING` | No DOI has been deposited or claimed. |
 | Authorship | `DANNYEXPERIMENTS_APPROVED` | Citation metadata follows the owner's established public convention. |
@@ -29,19 +29,18 @@ Public repository gate: `PUBLIC_MAIN_CI_PASS_METADATA_CLOSURE_PENDING`.
 
 ## Remaining release steps
 
-1. Send this metadata/evidence closure through review, merge it, and require
-   both workflows to pass on the exact resulting public-`main` commit.
-2. Independently confirm branch protection or the applicable repository
-   ruleset; a passing badge is not evidence of protection.
-3. Create the immutable Version 1.0.0 tag and GitHub release from the exact
+1. Require both workflows to pass on the exact metadata-repair PR head, then
+   review and merge it through the protected branch.
+2. Create the immutable Version 1.0.0 tag and GitHub release from the exact
    audited assets, then re-download every asset and verify its SHA-256 hash.
-4. Only after that verification, advance to `PUBLIC_TIMESTAMPED_NO_DOI`.
-5. Deposit and resolve the DOI, then add it in a metadata-only protected
+3. Only after that verification, advance to `PUBLIC_TIMESTAMPED_NO_DOI`.
+4. Deposit and resolve the DOI, then add it in a metadata-only protected
    update.
-6. Obtain separate approval before any external problem-page notice.
+5. Obtain separate approval before any external problem-page notice.
 
 Current machine state: `PASS_HIGH_CONFIDENCE`,
 `PRIORITY_AUDIT_PASS_QUALIFIED`, `MANUSCRIPT_PASS`, and
-`PUBLIC_CANDIDATE_RUNNING`, with public visibility and CI independently
+`PUBLIC_MAIN_CI_PASS_RELEASE_PENDING`, with public visibility, CI, and branch
+protection independently
 recorded as above. None may be strengthened merely because this repository's
 integrity check passes. No Lean or Aristotle badge is authorized.
