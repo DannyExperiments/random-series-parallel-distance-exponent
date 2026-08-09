@@ -50,4 +50,6 @@ Generated from the sanitized allowlist. Raw/private evidence is excluded.
 
 No compiled manuscript PDF is present. `SHA256SUMS.txt` hashes every regular
 file except itself. The manuscript TeX is a designated private candidate with
-source QA `PASS`; compilation and visual preflight remain pending.
+source QA and hostile source-level audit `PASS`. The pinned clean-build
+workflow is configured; its first passing PDF and visual preflight remain
+pending.

@@ -17,7 +17,9 @@ The designated private manuscript source is `paper/manuscript.tex`, and its
 source-level QA passes. No PDF is present. The cached-only Tectonic attempt is
 recorded in `paper/BUILD_LOG.txt`; it stopped before TeX parsing because the
 resource cache is incomplete. `paper/BUILD.md` and `.github/workflows/pdf.yml`
-define the future clean-build gate after exact resource-fetch approval.
+define the clean-build gate. The pinned workflow uploads its PDF only as a
+short-lived private inspection artifact; a successful build does not replace
+page-by-page visual preflight or authorize a PDF badge by itself.
 
 No Lean build is currently available. The files in `formalization/` define a
 future partial target; they do not contain or claim a proof.

@@ -11,24 +11,24 @@ Status date: 2026-08-09.
 | Priority | `PRIORITY_AUDIT_COMPLETE_QUALIFIED` | A comprehensive documented search through 2026-08-09 found no identical or stronger all-interior characterization and classified it `APPARENTLY_NEW` with moderate confidence; absolute priority is not established. |
 | Novelty language | `PROVISIONAL_APPARENTLY_NEW_MODERATE` | Allowed only with the explicit cutoff and negative-search limitations. |
 | Computation | `NOT_LOAD_BEARING` | The candidate proof is symbolic. No finite experiment is represented as proof. |
-| Manuscript | `MANUSCRIPT_HOSTILE_SOURCE_AUDIT_PASS` | `paper/manuscript.tex` is the designated private candidate; source QA and hostile source-level audit pass. No PDF exists; compile and visual preflight are pending exact Tectonic resource approval. |
+| Manuscript | `MANUSCRIPT_HOSTILE_SOURCE_AUDIT_PASS` | `paper/manuscript.tex` is the designated private candidate; source QA and hostile source-level audit pass. No PDF exists; a clean CI build and visual preflight remain pending. |
 | Formalization | `FORMALIZATION_NOT_ATTEMPTED` | A dependency report and request packet exist; no Lean theorem has been proved. |
 | Human review | `PENDING` | No specialist or journal referee report is claimed. |
-| Publication | `PRIVATE_LOCAL_SKELETON` | No public repository, tag, release, DOI, submission, or external notice exists. |
-| Authorship | `UNRESOLVED` | Repository preparation, prompting, model output, curation, and mathematical authorship are not conflated. |
+| Publication | `PRIVATE_SOURCE_CANDIDATE` | The repository is private; no public visibility, tag, release, DOI, submission, or external notice exists. |
+| Authorship | `PROVISIONAL_DANNYEXPERIMENTS` | Citation metadata follows the owner's established public convention; the private-candidate version has no DOI. |
 | License | `UNRESOLVED` | No license is granted. |
 
 ## Release blockers
 
-1. The designated manuscript source must be cleanly compiled after exact
-   resource-fetch approval, visually inspected page by page, and independently
-   audited against the canonical claim. No PDF badge is authorized before the
-   public default-branch workflow passes.
+1. The designated manuscript source must pass the clean PDF workflow, be
+   visually inspected page by page, and be independently audited against the
+   canonical claim. No PDF badge is authorized before the public default-branch
+   workflow passes.
 2. Any formalization claim must be backed by downloaded source, a clean pinned
    build, a no-placeholder scan, an axiom audit, and a scope-match report.
-3. The public allowlist, hashes, badges, branch protection, authorship,
-   disclosure, license, visibility, DOI, and external-notice decisions require
-   explicit human approval.
+3. The public allowlist, hashes, badges, branch protection, disclosure,
+   license, visibility, DOI, and external-notice decisions require explicit
+   human approval.
 
 Current machine state: `PASS_HIGH_CONFIDENCE` and
 `PRIORITY_AUDIT_COMPLETE_QUALIFIED`. Neither may be strengthened merely

@@ -3,9 +3,9 @@
 This tree was built by allowlist from a permanently private evidence case. It
 contains no raw chat transcript or private model receipt.
 
-| Public-safe artifact | Role | SHA-256 at skeleton freeze |
+| Public-safe artifact | Role | Integrity record |
 |---|---|---|
-| `proof/CANONICAL_REPAIRED_PROOF_V1.md` | Exact repaired mathematical draft awaiting fresh audit | recorded in `SHA256SUMS.txt` |
+| `proof/CANONICAL_REPAIRED_PROOF_V1.md` | Exact repaired mathematical draft matched to the designated manuscript by the passing hostile source-level audit | recorded in `SHA256SUMS.txt` |
 | `audits/public_safe_reports/MATHEMATICAL_AUDIT_STATUS.md` | Sanitized audit adjudication and repair boundary | recorded in `SHA256SUMS.txt` |
 | `audits/public_safe_reports/PRIORITY_AUDIT_STATUS.md` | Sanitized source and priority boundary | recorded in `SHA256SUMS.txt` |
 | `formalization/FORMALIZATION_FEASIBILITY.md` | Formalization feasibility and scope | recorded in `SHA256SUMS.txt` |

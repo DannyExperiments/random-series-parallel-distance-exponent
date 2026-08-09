@@ -3,9 +3,9 @@
 **Document status:** director-repaired mathematical draft V1, dated
 2026-08-09. This draft preserves the three frozen discovery returns and
 incorporates the local repairs identified by two internal audits and one
-external adversarial referee. It still requires a fresh audit of the exact
-repaired text before it can be promoted to `MATH_AUDIT_PASS` or used as a
-release manuscript.
+external adversarial referee. A fresh hostile source-level audit subsequently
+reconstructed the designated current manuscript against this canonical proof
+and returned `PASS` with high confidence and no invalid inference.
 
 ## 1. Original question and exact scope
 
@@ -552,5 +552,5 @@ CANONICAL_HEADLINE_THEOREM: Theorem 3.1
 PRIMARY_CHARACTERIZATION: nonlinear eigenprofile plus Collatz-Wielandt formulas
 SECONDARY_CHARACTERIZATION: invariant-measure maximum and ergodic dual
 ALL_IDENTIFIED_LOCAL_REPAIRS_INCORPORATED: YES
-FIRST_UNPROVED_INFERENCE: NONE IN THE REPAIRED DRAFT; FRESH EXACT-TEXT AUDIT PENDING
+FIRST_UNPROVED_INFERENCE: NONE IN THE REPAIRED DRAFT; FRESH HOSTILE SOURCE-LEVEL AUDIT: PASS_HIGH_CONFIDENCE
 ```

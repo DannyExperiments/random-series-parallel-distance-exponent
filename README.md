@@ -78,22 +78,21 @@ new contribution here.
   are supplied, but no theorem in this repository is kernel checked.
 - **Manuscript:** `paper/manuscript.tex` is the designated private candidate
   and its source QA and hostile source-level audit pass. No PDF exists;
-  compilation and page-by-page visual
-  preflight remain pending exact approval for the missing Tectonic resource
-  bundle.
+  a clean GitHub Actions build and page-by-page visual preflight remain
+  pending.
 - **Review:** no human specialist or journal peer review is claimed.
 
-This directory is a **private local public-candidate skeleton**, not a public
+This directory is a **private source-stage public-candidate repository**, not a public
 release. It must not be made public until the remaining release gates listed
 in [STATUS.md](STATUS.md) are deliberately cleared and the human owner
-approves authorship, licensing, visibility, and DOI metadata.
+approves licensing, visibility, and DOI metadata.
 
 ## Repository map
 
 - `proof/`: the exact repaired mathematical draft and scope contract.
 - `audits/public_safe_reports/`: sanitized audit status; no private receipts.
 - `paper/`: designated private manuscript TeX, source QA, exact claim-scope
-  comparison, hostile audit prompt, and explicit PDF-build blocker. No PDF is
+  comparison, hostile audit prompt, and local PDF-build status. No PDF is
   present.
 - `formalization/`: feasibility, dependencies, and a narrowly scoped request.
 - `verification/`: deterministic integrity and claim-boundary checks.
@@ -101,6 +100,7 @@ approves authorship, licensing, visibility, and DOI metadata.
 
 ## Citation and licensing
 
-Citation metadata is provisional because authorship is unresolved. No license
-has been granted. See [CITATION.cff](CITATION.cff) and
+Citation metadata uses the established public author convention
+`DannyExperiments` but retains a private-candidate version and no DOI. No
+license has been granted. See [CITATION.cff](CITATION.cff) and
 [LICENSE_STATUS.md](LICENSE_STATUS.md).

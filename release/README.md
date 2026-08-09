@@ -1,6 +1,7 @@
 # Release lane
 
-No release exists. The repository is a private local skeleton. Release assets,
-tag, DOI, branch-protection record, and anonymous public-page verification are
-all pending human approval and completion of the audit, priority, manuscript,
-and privacy gates.
+No release exists. The repository is a private source-stage candidate. Release
+assets, tag, DOI, branch-protection record, and anonymous public-page
+verification remain pending. The mathematical and priority audits have passed
+at their qualified scopes; the PDF build, visual inspection, final privacy
+recheck, and explicit human release approval remain open gates.

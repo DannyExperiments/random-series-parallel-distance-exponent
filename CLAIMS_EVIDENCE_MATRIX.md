@@ -3,11 +3,11 @@
 | Claim | Evidence | Current classification |
 |---|---|---|
 | The exact law recursion is a sum/min mixture | Model definition and `proof/CANONICAL_REPAIRED_PROOF_V1.md`, Section 2 | Exact model identity |
-| \(m_{n+k}\le m_nm_k\) | Normalized leaf Jensen argument, Section 4 | Referee-identified normalization repair incorporated; fresh exact-text pass pending |
-| The normalized second moment is at most \((2p-1)^{-1}\) | Exact moment identities and anti-correlation, Section 5 | Repaired; fresh exact-text audit pending |
-| A principal quantile eigenprofile exists for every interior \(p\) | Compactness plus perturbed Schauder argument, Sections 6--7 | Candidate headline; fresh exact-text audit pending |
-| \(e^{\delta(p)}\) equals the maximal eigenvalue and Collatz--Wielandt values | Sections 4, 7, and 8 | Candidate headline; fresh exact-text audit pending |
-| Invariant-measure and ergodic-dual formulas hold | Section 9 | Candidate compatible extension; fresh exact-text audit pending |
+| \(m_{n+k}\le m_nm_k\) | Normalized leaf Jensen argument, Section 4 | Referee-identified normalization repair incorporated; fresh hostile source-level audit `PASS` |
+| The normalized second moment is at most \((2p-1)^{-1}\) | Exact moment identities and anti-correlation, Section 5 | Repair incorporated; fresh hostile source-level audit `PASS` |
+| A principal quantile eigenprofile exists for every interior \(p\) | Compactness plus perturbed Schauder argument, Sections 6--7 | Audited candidate headline; fresh hostile source-level audit `PASS` |
+| \(e^{\delta(p)}\) equals the maximal eigenvalue and Collatz--Wielandt values | Sections 4, 7, and 8 | Audited candidate headline; fresh hostile source-level audit `PASS` |
+| Invariant-measure and ergodic-dual formulas hold | Section 9 | Audited compatible extension; fresh hostile source-level audit `PASS` |
 | The new argument proves \(\delta(1/2)=0\) | None | **False attribution; forbidden** |
 | Prior work proves \(\delta(1/2)=0\) | Primary literature identified in the source audit | Prior result |
 | \(\delta(1)=\log2\) | Deterministic all-series model | Elementary endpoint |

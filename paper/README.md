@@ -9,7 +9,8 @@ the prior credit for `p=1/2`, and the elementary `p=1` endpoint.
 Source-level formatting, scope, and privacy QA pass. This is not a compiled or
 visually inspected release manuscript: no PDF exists. The cached-only Tectonic
 attempt stopped before TeX parsing because the local resource bundle is
-missing. A live resource fetch and compile require exact action-time approval.
+missing. The pinned GitHub Actions workflow is the clean-build route; its PDF
+must still be retrieved, frozen, and inspected page by page.
 
 Read `CLAIM_SCOPE_AND_LIMITATIONS.md`, `SOURCE_COMPARISON.md`, `SOURCE_QA.md`,
 and `BUILD_STATUS.md` before treating the source as a release candidate. Use
