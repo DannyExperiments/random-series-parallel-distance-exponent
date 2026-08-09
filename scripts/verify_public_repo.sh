@@ -20,6 +20,26 @@ for path in "${required[@]}"; do
   test -f "$path" || { echo "missing required file: $path" >&2; exit 1; }
 done
 
+if find . -type l -not -path './.git/*' -print -quit | grep -q .; then
+  echo "public repository verification: FAIL symlink present" >&2
+  exit 1
+fi
+if find . -type f -not -path './.git/*' \( -path '*/__pycache__/*' -o -name '*.pyc' -o -name '*.pyo' \) -print -quit | grep -q .; then
+  echo "public repository verification: FAIL generated Python cache present" >&2
+  exit 1
+fi
+
+expected_inventory="$(mktemp)"
+ledger_inventory="$(mktemp)"
+find . -type f -not -path './.git/*' -not -name 'SHA256SUMS.txt' -print \
+  | sed 's#^\./##' | LC_ALL=C sort > "$expected_inventory"
+cut -c 67- SHA256SUMS.txt | LC_ALL=C sort > "$ledger_inventory"
+if ! cmp -s "$expected_inventory" "$ledger_inventory"; then
+  echo "public repository verification: FAIL checksum inventory mismatch" >&2
+  diff -u "$expected_inventory" "$ledger_inventory" >&2 || true
+  exit 1
+fi
+
 shasum -a 256 -c SHA256SUMS.txt
 python3 verification/src/verify_claim_boundaries.py
 bash scripts/scan_public_tree.sh

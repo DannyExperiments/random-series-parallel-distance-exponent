@@ -1,3 +1,9 @@
 note: using only cached resource files
 note: generating format "latex"
 error: failed to open input file "tectonic-format-latex.tex"
+
+Private GitHub CI compile attempt on 2026-08-09 reached TeX and exposed two
+nonmathematical declaration typos: the command names in the two
+`\DeclareMathOperator*` declarations lacked their leading backslashes. Both
+declarations were repaired without changing any theorem, formula, hypothesis,
+or proof step. A clean rerun is pending.
