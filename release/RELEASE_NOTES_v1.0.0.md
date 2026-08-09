@@ -29,9 +29,12 @@ and page-by-page visual preflight are complete. The model-specific assembly is
 described as apparently new after documented search through 2026-08-09, with
 moderate confidence; absolute historical priority, human peer review, and
 formal verification are not claimed. The repository is public; both workflows
-passed at public-`main` commit
-`d79230cdb87d1438c97281d0c940f8e1a352642c`, and exactly the verify and PDF
-badges were anonymously tested. The later metadata/evidence closure must
-re-pass CI after merge. The immutable Version 1.0.0 tag and GitHub release,
-published-asset re-download verification, DOI deposit, and any external notice
+passed at the exact pre-release public-`main` base commit
+`f5c3e0bb888a4e4b796b90729a6fc1cfa0581e96` in runs `31302269010` and
+`31302269014`, and exactly the verify and PDF badges were anonymously tested.
+Branch protection is active. The metadata-only release repair must pass the
+same two checks before merge and tagging.
+
+The immutable Version 1.0.0 tag and GitHub release remain pending. Published-
+asset re-download verification, DOI deposit, and any external notice also
 remain pending and are not claimed by these preparatory notes.

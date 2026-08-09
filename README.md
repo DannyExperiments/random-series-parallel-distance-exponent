@@ -92,13 +92,13 @@ new contribution here.
   page after a nonmathematical display-spacing repair; preflight passed.
 - **Review:** no human specialist or journal peer review is claimed.
 
-The repository is publicly accessible. At public-`main` commit
-`d79230cdb87d1438c97281d0c940f8e1a352642c`, both named workflows passed and
-both badge images and targets were tested anonymously. This local
-metadata/evidence closure is a later, unpushed tree and must pass the same two
-workflows after merge. Branch-protection confirmation, an immutable Version
-1.0.0 tag and release, release-asset re-download verification, and DOI deposit
-remain distinct gates; see [STATUS.md](STATUS.md).
+The repository is publicly accessible. At the exact pre-release base commit
+`f5c3e0bb888a4e4b796b90729a6fc1cfa0581e96`, `Verify public evidence` run
+`31302269010` and `PDF build` run `31302269014` passed. Both badge images and
+targets were then tested anonymously and reported the public `main` branch as
+passing. Branch protection is active on `main`; an immutable Version 1.0.0 tag
+and release, release-asset re-download verification, and DOI deposit remain
+distinct gates; see [STATUS.md](STATUS.md).
 
 ## Repository map
 
@@ -114,10 +114,11 @@ remain distinct gates; see [STATUS.md](STATUS.md).
 ## Automation badges
 
 The two displayed badges report evidence/integrity verification and clean PDF
-reconstruction on public `main`. Both workflows passed at commit
-`d79230cdb87d1438c97281d0c940f8e1a352642c`; their badge images and target
-pages were anonymously tested. The exact activation record and the required
-post-merge recheck are in
+reconstruction on public `main`. Both workflows passed at the exact
+pre-release base commit `f5c3e0bb888a4e4b796b90729a6fc1cfa0581e96` in
+runs `31302269010` and `31302269014`; their badge images and target pages were
+anonymously tested. The exact activation record and the required release-head
+recheck are in
 [`release/BADGE_ACTIVATION.md`](release/BADGE_ACTIVATION.md). No Lean,
 Aristotle, or DOI badge is displayed.
 

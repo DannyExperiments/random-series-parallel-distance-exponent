@@ -2,8 +2,9 @@
 
 This directory contains deterministic public-safe evidence and the exact
 Version 1.0.0 release-staging plan. The repository is public and its two
-default-branch workflows passed at commit
-`d79230cdb87d1438c97281d0c940f8e1a352642c`, but no immutable tag or GitHub
+default-branch workflows passed at the exact pre-release base commit
+`f5c3e0bb888a4e4b796b90729a6fc1cfa0581e96` in runs `31302269010` and
+`31302269014`. Branch protection is active, but no immutable tag or GitHub
 release exists yet.
 
 The five payloads named and hashed by `RELEASE_ASSET_SHA256SUMS.txt` are:
@@ -24,7 +25,7 @@ replay README and is checked by the repository verification workflow.
 
 The mathematical, priority, manuscript, formalization-status, privacy, and
 deterministic-replay gates are complete. Public visibility, public-main CI for
-the pre-closure tree, and badge activation are recorded as passed. CI for the
-new closure tree, branch-protection confirmation, the immutable release,
+the pre-release base, badge activation, and branch protection are recorded as
+passed. Exact-head CI for the metadata-only repair, the immutable release,
 post-publication asset re-download verification, DOI deposit, and any external
 notice remain separate steps.

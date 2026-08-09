@@ -13,11 +13,11 @@
 - [x] License choice approved as no repository-wide reuse license; all rights reserved.
 - [x] Public repository name approved.
 - [x] Repository visibility changed to public and anonymously verified.
-- [x] Both workflows passed on exact public-`main` commit `d79230cdb87d1438c97281d0c940f8e1a352642c`.
+- [x] Both workflows passed on exact pre-release public-`main` base commit `f5c3e0bb888a4e4b796b90729a6fc1cfa0581e96`.
 - [x] Both public-main badge images and both workflow target pages were anonymously click-tested.
 - [x] Exactly the verify and PDF badges are activated in this local closure tree.
-- [ ] This metadata/evidence closure is merged, both workflows re-pass on its exact public-`main` commit, and the displayed badges are re-tested anonymously there.
-- [ ] Branch protection is confirmed on public `main`.
+- [ ] The metadata-only release repair passes both workflows on its exact PR head, is merged through protected `main`, and the displayed badges are re-tested anonymously there.
+- [x] Branch protection is confirmed on public `main`.
 - [ ] Version 1.0.0 tag and GitHub release are created from the final audited assets.
 - [ ] Every published release asset is re-downloaded and its SHA-256 hash matches the final release ledger.
 - [x] DOI metadata pattern approved; minting remains after the immutable public release.
