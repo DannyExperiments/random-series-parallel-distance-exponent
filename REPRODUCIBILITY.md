@@ -26,12 +26,15 @@ There is no load-bearing computation. The mathematical object to inspect is
 the symbolic draft in `proof/CANONICAL_REPAIRED_PROOF_V1.md`.
 
 The designated source is `paper/manuscript.tex`. The pinned private-branch
-workflow built the exact current source successfully in run `31290623765`.
-The retrieved artifact was frozen as `paper/manuscript.pdf` (SHA-256
+workflow built the exact source successfully in run `31290623765`; the same
+source then passed the public-`main` PDF workflow in run `31295518480` at
+commit `d79230cdb87d1438c97281d0c940f8e1a352642c`. The retrieved private-branch
+artifact was frozen as `paper/manuscript.pdf` (SHA-256
 `b7756646862ca72ca317fbf50995f1827da84bc2debb4329b362c4180fb70964`),
 text-scanned, and inspected page by page; see `paper/PDF_PREFLIGHT.md`. This
-private-branch pass does not authorize a public badge. The badge is enabled
-only after the same workflow passes on the public default branch.
+public-default-branch pass authorized the displayed PDF badge, whose image and
+target were anonymously tested. The present local metadata/evidence closure
+must receive its own remote checks after a later push and merge.
 
 No Lean build is currently available. The files in `formalization/` define a
 future partial target; they do not contain or claim a proof.

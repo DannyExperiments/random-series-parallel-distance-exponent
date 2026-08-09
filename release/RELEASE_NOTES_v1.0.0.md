@@ -28,5 +28,10 @@ The mathematical audit, three priority-search lanes, exact-source PDF build,
 and page-by-page visual preflight are complete. The model-specific assembly is
 described as apparently new after documented search through 2026-08-09, with
 moderate confidence; absolute historical priority, human peer review, and
-formal verification are not claimed. Public visibility, the immutable GitHub
-release, and DOI deposit remain separate post-approval actions.
+formal verification are not claimed. The repository is public; both workflows
+passed at public-`main` commit
+`d79230cdb87d1438c97281d0c940f8e1a352642c`, and exactly the verify and PDF
+badges were anonymously tested. The later metadata/evidence closure must
+re-pass CI after merge. The immutable Version 1.0.0 tag and GitHub release,
+published-asset re-download verification, DOI deposit, and any external notice
+remain pending and are not claimed by these preparatory notes.

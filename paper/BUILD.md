@@ -24,5 +24,8 @@ The local cached-only attempt failed before manuscript parsing because
 `tectonic-format-latex.tex` is absent from the cache. No local resource bundle
 was fetched. The pinned GitHub Actions workflow supplied the clean build gate.
 The exact current source passed private-branch run `31290623765`; its PDF has
-been frozen and inspected as recorded in `PDF_PREFLIGHT.md`. No PDF badge is
-authorized before the workflow passes on the public default branch.
+been frozen and inspected as recorded in `PDF_PREFLIGHT.md`. The identical
+source passed public-`main` run `31295518480` at commit
+`d79230cdb87d1438c97281d0c940f8e1a352642c`; the PDF badge was then activated
+and anonymously tested. The later metadata/evidence closure must re-pass its
+own post-merge workflow.

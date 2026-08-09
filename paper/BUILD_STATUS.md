@@ -17,7 +17,12 @@ PDF_SHA256: b7756646862ca72ca317fbf50995f1827da84bc2debb4329b362c4180fb70964
 PDF_PAGE_COUNT: 4
 PDF_PAGE_SIZE: A4
 PDF_VISUAL_PREFLIGHT: PASS
-PUBLIC_DEFAULT_BRANCH_BADGE_ELIGIBLE: NO
+PUBLIC_DEFAULT_BRANCH_COMMIT: d79230cdb87d1438c97281d0c940f8e1a352642c
+PUBLIC_DEFAULT_BRANCH_PDF_RUN: 31295518480
+PUBLIC_DEFAULT_BRANCH_PDF_JOB: Rebuild manuscript PDF
+PUBLIC_DEFAULT_BRANCH_PDF_STATUS: PASS
+PUBLIC_DEFAULT_BRANCH_BADGE_ELIGIBLE: YES
+PUBLIC_DEFAULT_BRANCH_BADGE_ANONYMOUS_TEST: PASS
 ```
 
 The cached-only attempt stopped before parsing the manuscript because the
@@ -31,5 +36,7 @@ cleanly, after which page-by-page inspection motivated one nonmathematical
 display-spacing repair. The exact current source then passed the hosted rerun.
 Its four-page A4 artifact was retrieved, frozen, and inspected page by page;
 no clipping, overlap, malformed display, or unreadable glyph was found. The
-public PDF badge remains unauthorized until the workflow passes on the public
-default branch.
+unchanged source later passed the public-default-branch workflow at the commit
+and run recorded above, after which the PDF badge image and target were tested
+anonymously. That public run does not claim byte identity between separately
+compiled PDFs and does not certify this later unpushed metadata closure.

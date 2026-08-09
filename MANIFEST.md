@@ -62,4 +62,7 @@ Generated from the sanitized allowlist. Raw/private evidence is excluded.
 `SHA256SUMS.txt` hashes every regular file except itself. The manuscript TeX is
 the designated release source and has source QA and hostile source-level audit
 `PASS`. The exact private-branch build and frozen four-page PDF passed visual
-preflight; its public-default-branch badge remains withheld.
+preflight. The same source passed the public-default-branch PDF workflow at
+commit `d79230cdb87d1438c97281d0c940f8e1a352642c`, and the verify and PDF badges
+were activated after anonymous testing. The immutable release and DOI remain
+pending.
