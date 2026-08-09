@@ -1,0 +1,26 @@
+name: PDF build
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+    branches: [main]
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  clean-pdf-build:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Check out repository
+        uses: actions/checkout@11d5960a326750d5838078e36cf38b85af677262
+      - name: Require designated manuscript source
+        run: test -f paper/manuscript.tex
+      - name: Build PDF
+        uses: xu-cheng/latex-action@24a43acb59fe864bc4268ef1ae2f19494bcb0d76
+        with:
+          root_file: paper/manuscript.tex
+      - name: Require produced PDF
+        run: test -f paper/manuscript.pdf

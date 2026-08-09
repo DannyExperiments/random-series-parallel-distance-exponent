@@ -1,0 +1,268 @@
+\documentclass[a4paper,11pt]{amsart}
+\usepackage[margin=1in]{geometry}
+\usepackage{amsmath,amssymb,mathtools}
+\usepackage{microtype}
+\usepackage[hidelinks]{hyperref}
+
+\newtheorem{theorem}{Theorem}[section]
+\newtheorem{proposition}[theorem]{Proposition}
+\newtheorem{lemma}[theorem]{Lemma}
+\newtheorem{corollary}[theorem]{Corollary}
+\theoremstyle{remark}
+\newtheorem{remark}[theorem]{Remark}
+
+\DeclareMathOperator*{essinf}{ess\,inf}
+\DeclareMathOperator*{argmax}{arg\,max}
+
+\title[Distance exponents]{Distance Exponents in a Random Series--Parallel Graph}
+\date{}
+
+\begin{document}
+
+\begin{abstract}
+Starting from one edge, replace every edge independently by two edges in series with probability $p$ and by two parallel edges with probability $1-p$.  For every $p\in(1/2,1)$, we characterize the exponential growth rate of the expected endpoint distance as the attained principal eigenvalue of an explicit nonlinear operator on decreasing quantile profiles.  We also prove exact lower and upper Collatz--Wielandt formulas and a compatible invariant-measure variational formula.  The critical identity at $p=1/2$ is due to Chen, Derrida, Duquesne, and Shi, while the value at $p=1$ is elementary; combined with those endpoint results, the interior characterization answers Benjamini's Question~9.6 on the full parameter interval.
+\end{abstract}
+
+\maketitle
+
+\section{The model and the result}
+
+Begin with one edge and two distinguished endpoints. At each generation, replace every current edge independently by two edges in series with probability $p$, or by two parallel edges with probability $q=1-p$. Let $\Delta_n$ be the distance between the distinguished endpoints after $n$ generations, with $\Delta_0=1$. Root decomposition gives
+\begin{equation}\label{eq:recursion}
+ \Delta_{n+1}\mathrel{\overset d=}
+ \begin{cases}
+  \Delta_n^{(1)}+\Delta_n^{(2)},&\text{with probability }p,\\
+  \min\{\Delta_n^{(1)},\Delta_n^{(2)}\},&\text{with probability }q,
+ \end{cases}
+\end{equation}
+where the two copies are independent. Put $m_n=\mathbb E\Delta_n$.
+
+This model was studied by Hambly and Jordan~\cite{HamblyJordan2004}. Benjamini asked for the shape of the expected-distance exponent on $[1/2,1]$~\cite[Question~9.6]{Benjamini2013}. Chen, Derrida, Duquesne, and Shi proved the critical identity $\delta(1/2)=0$ and a sharp slightly-supercritical asymptotic~\cite{ChenEtAl2026}. The theorem proved here concerns only the residual interior interval $p\in(1/2,1)$.
+
+For a nonnegative integrable random variable $X$, write $Q_X$ for its decreasing quantile on $(0,1)$. For a nonnegative decreasing integrable profile $Q$, let $U,V$ be independent uniform random variables on $(0,1)$ and let $B$ be an independent Bernoulli random variable with parameter $p$. Define
+\begin{equation}\label{eq:HpQ}
+ H_{p,Q}=B\bigl(Q(U)+Q(V)\bigr)+(1-B)Q(\max\{U,V\})
+\end{equation}
+and let $T_pQ$ be the decreasing quantile of $H_{p,Q}$. Since $Q$ is decreasing, $Q(\max\{U,V\})=\min\{Q(U),Q(V)\}$. If
+\[
+ M(Q)=\int_0^1Q(u)\,du,
+\]
+then $Q_n=T_p^n\mathbf 1$ is exactly the decreasing quantile of $\Delta_n$, and $m_n=M(Q_n)$.
+
+For $p>1/2$, define
+\begin{equation}\label{eq:Kp}
+ K_p=\left\{Q\ge0: Q\text{ is decreasing},\ M(Q)=1,\
+          \int_0^1Q(u)^2\,du\le\frac1{2p-1}\right\}.
+\end{equation}
+
+\begin{theorem}[Interior spectral characterization]\label{thm:main}
+For every $p\in(1/2,1)$, the limit
+\begin{equation}\label{eq:rho}
+ \rho(p)=\lim_{n\to\infty}m_n^{1/n}=\inf_{n\ge1}m_n^{1/n}
+\end{equation}
+exists, and $\delta(p)=\log\rho(p)$. There exists $Q_p\in K_p$ such that
+\begin{equation}\label{eq:eigen}
+ T_pQ_p=\rho(p)Q_p.
+\end{equation}
+The number $\rho(p)$ is the maximal eigenvalue among nonnegative, nonzero, integrable decreasing profiles, normalized to have mean one. Moreover,
+\begin{align}
+ \rho(p)&=\max\left\{\alpha\ge0:\exists Q\in K_p,\ T_pQ\ge\alpha Q\ \text{a.e.}\right\},\label{eq:CWlower}\\
+ \rho(p)&=\inf\left\{\beta>0:\exists Q\in K_p,\ \essinf Q>0,\ T_pQ\le\beta Q\ \text{a.e.}\right\}.\label{eq:CWupper}
+\end{align}
+\end{theorem}
+
+The formulas are noncircular: the right-hand sides use only the explicit operator~\eqref{eq:HpQ}. No uniqueness of $Q_p$, elementary scalar formula for $\delta(p)$, or convergence of all normalized orbits is asserted.
+
+\section{Submultiplicativity and the exponential rate}
+
+The operator $T_p$ is positively homogeneous and order preserving. It is also continuous in $L^1$. Indeed, couple two profiles using the same $B,U,V$. The one-dimensional quantile representation of the Wasserstein distance gives
+\begin{equation}\label{eq:L1cont}
+ \|T_pQ-T_pR\|_1
+ =W_1(\mathcal L(H_{p,Q}),\mathcal L(H_{p,R}))
+ \le2\|Q-R\|_1.
+\end{equation}
+
+Fix a depth-$n$ gate-labelled binary tree $\tau$ and let $\Phi_\tau(x_1,\ldots,x_{2^n})$ be its endpoint-distance evaluation, using addition at a series gate and minimum at a parallel gate. The map $\Phi_\tau$ is coordinatewise nondecreasing, positively homogeneous, and concave; these properties follow inductively because sums and pointwise minima preserve them. If $Y_1,\ldots,Y_{2^n}$ are independent with mean one, Jensen's inequality yields
+\begin{equation}\label{eq:Jensen}
+ \mathbb E\Phi_\tau(Y_1,\ldots,Y_{2^n})
+ \le \Phi_\tau(1,\ldots,1).
+\end{equation}
+Averaging over the gate labels shows that every mean-one profile $Q$ satisfies
+\begin{equation}\label{eq:JensenOperator}
+ M(T_p^nQ)\le m_n.
+\end{equation}
+
+For depth-$k$ leaf distances, put $Y_i=\Delta_k^{(i)}/m_k$, so $\mathbb EY_i=1$. Positive homogeneity and~\eqref{eq:Jensen} give
+\[
+ \begin{aligned}
+ m_{n+k}
+ &=\mathbb E_\tau\mathbb E\Phi_\tau(\Delta_k^{(1)},\ldots,\Delta_k^{(2^n)})\\
+ &=m_k\mathbb E_\tau\mathbb E\Phi_\tau(Y_1,\ldots,Y_{2^n})
+ \le m_km_n.
+ \end{aligned}
+\]
+Thus $\log m_n$ is subadditive. The mean multiplier lies between $2p$ and $1+p$, so $(2p)^n\le m_n\le(1+p)^n$. Fekete's lemma proves~\eqref{eq:rho}; by the model's definition of the exponent, $\delta(p)=\log\rho(p)$.
+
+\section{A compact invariant profile set}
+
+For a decreasing profile define
+\[
+ S(Q)=\int_0^1Q^2,\qquad
+ A(Q)=2\int_0^1uQ(u)\,du,\qquad
+ C(Q)=2\int_0^1uQ(u)^2\,du.
+\]
+When $M(Q)=1$, the quantity $A(Q)$ is the mean of the minimum of two independent variables with quantile $Q$, so $0\le A(Q)\le1$. Directly from~\eqref{eq:HpQ},
+\begin{align}
+ M(T_pQ)&=d(Q):=2p+qA(Q),\label{eq:firstmoment}\\
+ S(T_pQ)&=2pS(Q)+2p+qC(Q).\label{eq:secondmoment}
+\end{align}
+The load-bearing anti-correlation inequality is
+\begin{equation}\label{eq:anticorr}
+ C(Q)M(Q)\le A(Q)S(Q).
+\end{equation}
+Indeed,
+\[
+ A(Q)S(Q)-C(Q)M(Q)
+ =\int_0^1\!\int_0^1
+ (u-v)Q(u)Q(v)\bigl(Q(v)-Q(u)\bigr)\,du\,dv\ge0,
+\]
+because $Q$ is decreasing. For $M(Q)=1$, equations~\eqref{eq:firstmoment}--\eqref{eq:anticorr} imply
+\begin{equation}\label{eq:normalizedmoment}
+ S\left(\frac{T_pQ}{d(Q)}\right)
+ \le\frac{S(Q)}{d(Q)}+\frac{2p}{d(Q)^2}
+ \le\frac{S(Q)+1}{2p}.
+\end{equation}
+Since $d(Q)\ge2p>0$, every normalization denominator is nonzero. The bound $1/(2p-1)$ is invariant under~\eqref{eq:normalizedmoment}; hence $K_p$ is invariant under the mean-normalized map
+\[
+ N_pQ=\frac{T_pQ}{d(Q)}.
+\]
+Starting from $\mathbf1$ also gives the finite-depth estimate
+\begin{equation}\label{eq:L2bound}
+ \frac{\mathbb E\Delta_n^2}{(\mathbb E\Delta_n)^2}\le\frac1{2p-1}.
+\end{equation}
+
+\begin{lemma}\label{lem:compact}
+The set $K_p$ is nonempty, convex, and compact in $L^1(0,1)$, and $N_p:K_p\to K_p$ is continuous.
+\end{lemma}
+
+\begin{proof}
+For a decreasing mean-one profile, $Q(u)\le1/u$ for $u>0$. Helly selection on every $[\eta,1]$, followed by a diagonal argument, gives an almost-everywhere convergent subsequence. The uniform $L^2$ bound implies uniform integrability, since
+\[
+ \int_EQ\le |E|^{1/2}\left(\int_0^1Q^2\right)^{1/2}
+ \le\sqrt{\frac{|E|}{2p-1}}.
+\]
+Vitali's theorem upgrades the convergence to $L^1$. The mean is preserved, and Fatou's lemma preserves the $L^2$ bound. Continuity follows from~\eqref{eq:L1cont}, continuity of $d$, and $d(Q)\ge2p$.
+\end{proof}
+
+\section{The principal eigenprofile}
+
+For $\varepsilon>0$, set
+\[
+ T_{p,\varepsilon}Q=T_pQ+\varepsilon M(Q)\mathbf1,
+ \qquad
+ N_{p,\varepsilon}Q=\frac{T_{p,\varepsilon}Q}{M(T_{p,\varepsilon}Q)}.
+\]
+If a nonnegative random variable has mean $m$, second moment $s$, and is shifted by $c\ge0$, then
+\begin{equation}\label{eq:shift}
+ \frac{s+2cm+c^2}{(m+c)^2}\le\frac{s}{m^2},
+\end{equation}
+because the cross-multiplied difference is $c(2m+c)(s-m^2)\ge0$. Consequently $N_{p,\varepsilon}$ is a continuous self-map of $K_p$. Schauder's fixed-point theorem gives $Q_\varepsilon\in K_p$ and $\lambda_\varepsilon>0$ such that
+\begin{equation}\label{eq:perturbed}
+ T_{p,\varepsilon}Q_\varepsilon=\lambda_\varepsilon Q_\varepsilon,
+ \qquad M(Q_\varepsilon)=1.
+\end{equation}
+Moreover,
+\[
+ Q_\varepsilon\ge c_\varepsilon\mathbf1,
+ \qquad c_\varepsilon=\frac{\varepsilon}{\lambda_\varepsilon}>0.
+\]
+Order preservation and homogeneity imply
+\[
+ \lambda_\varepsilon^nQ_\varepsilon
+ =T_{p,\varepsilon}^nQ_\varepsilon
+ \ge c_\varepsilon T_p^n\mathbf1.
+\]
+After integration and taking $n$-th roots, this yields $\lambda_\varepsilon\ge\rho(p)$.
+
+By Lemma~\ref{lem:compact}, along some $\varepsilon_j\downarrow0$ one has $Q_{\varepsilon_j}\to Q_p$ in $L^1$. Also
+\[
+ \lambda_\varepsilon=M(T_pQ_\varepsilon)+\varepsilon=d(Q_\varepsilon)+\varepsilon,
+ \qquad 2p+\varepsilon\le\lambda_\varepsilon\le1+p+\varepsilon,
+\]
+so a subsequence converges to some $\lambda$. Passing to the limit in~\eqref{eq:perturbed} gives $T_pQ_p=\lambda Q_p$ and $\lambda\ge\rho(p)$. Conversely, iteration and~\eqref{eq:JensenOperator} give
+\[
+ \lambda^n=M(T_p^nQ_p)\le m_n,
+\]
+so $\lambda\le\rho(p)$. Thus $\lambda=\rho(p)$, proving~\eqref{eq:eigen}. The argument does not assume convergence of the actual orbit $N_p^n\mathbf1$.
+
+If an admissible normalized eigenprofile satisfies $T_pQ=\lambda Q$, then~\eqref{eq:JensenOperator} gives $\lambda^n\le m_n$ and hence $\lambda\le\rho(p)$. This proves maximality of the numerical eigenvalue, not uniqueness of its eigenprofile.
+
+Suppose next that $Q\in K_p$ and $T_pQ\ge\alpha Q$. Iteration and~\eqref{eq:JensenOperator} give $\alpha^n\le m_n$, hence $\alpha\le\rho(p)$; equality is attained by $Q_p$. This proves~\eqref{eq:CWlower}.
+
+For the upper formula, assume $Q\in K_p$, $Q\ge c\mathbf1$ almost everywhere for some $c>0$, and $T_pQ\le\beta Q$. Then
+\[
+ cT_p^n\mathbf1\le T_p^nQ\le\beta^nQ,
+\]
+so $cm_n\le\beta^n$ and $\rho(p)\le\beta$. Conversely, the perturbed fixed points satisfy
+\[
+ T_pQ_\varepsilon=\lambda_\varepsilon Q_\varepsilon-\varepsilon\mathbf1
+ \le\lambda_\varepsilon Q_\varepsilon,
+\]
+with $\essinf Q_\varepsilon>0$, and every cluster value of $\lambda_\varepsilon$ is $\rho(p)$. This proves~\eqref{eq:CWupper} and completes the proof of Theorem~\ref{thm:main}.
+
+\section{An invariant-measure formula}
+
+The spectral characterization has a compatible dynamical form. Let $\mathcal I_p$ be the Borel probability measures on $K_p$ invariant under $N_p$, and put $f_p(Q)=\log d(Q)$.
+
+\begin{proposition}\label{prop:invariant}
+For every $p\in(1/2,1)$,
+\begin{equation}\label{eq:invariant}
+ \delta(p)=\max_{\Pi\in\mathcal I_p}\int_{K_p}f_p(Q)\,d\Pi(Q).
+\end{equation}
+\end{proposition}
+
+\begin{proof}
+For $Q_j=N_p^j\mathbf1$,
+\[
+ \log m_N=\sum_{j=0}^{N-1}f_p(Q_j).
+\]
+Every weak limit of the empirical occupation measures is invariant and has average $\delta(p)$. Conversely, homogeneity gives, for every mean-one $Q$,
+\[
+ \log M(T_p^nQ)=\sum_{j=0}^{n-1}f_p(N_p^jQ).
+\]
+Integrating against an invariant $\Pi$ and applying~\eqref{eq:JensenOperator} yields
+\[
+ n\int f_p\,d\Pi\le\log m_n.
+\]
+Taking the infimum over $n$ proves the reverse inequality. The Dirac mass at $Q_p$ attains the maximum, but the proof does not assert that every maximizing invariant measure is a fixed-point mass.
+\end{proof}
+
+\section{Endpoints and exact scope}
+
+Theorem~\ref{thm:main} addresses only $p\in(1/2,1)$. At the critical endpoint, Chen, Derrida, Duquesne, and Shi proved $\delta(1/2)=0$~\cite{ChenEtAl2026}; the compactness argument here does not extend to $p=1/2$ because the bound $1/(2p-1)$ diverges. At $p=1$, the distance is deterministically $2^n$, so $\delta(1)=\log2$. Thus the interior theorem, the prior critical theorem, and the elementary right endpoint together characterize the full interval in the sense asked by Benjamini's Question~9.6.
+
+The characterization is exact but not an elementary scalar formula in $p$. It does not prove uniqueness of $Q_p$, global convergence of normalized laws, monotonicity or convexity of $\delta$, or any compactness statement at the critical endpoint.
+
+\begin{thebibliography}{9}
+
+\bibitem{Benjamini2013}
+I.~Benjamini,
+\emph{Euclidean vs. graph metric},
+in \emph{Erdos Centennial}, Bolyai Soc. Math. Stud. \textbf{25}, Springer, 2013, pp.~35--57.
+\href{https://doi.org/10.1007/978-3-642-39286-3_2}{doi:10.1007/978-3-642-39286-3\_2}.
+
+\bibitem{ChenEtAl2026}
+X.~Chen, B.~Derrida, T.~Duquesne, and Z.~Shi,
+\emph{The distance on the slightly supercritical random series--parallel graph},
+Adv. Appl. Probab. \textbf{58} (2026), 80--121.
+\href{https://doi.org/10.1017/apr.2025.10023}{doi:10.1017/apr.2025.10023}.
+
+\bibitem{HamblyJordan2004}
+B.~M. Hambly and J.~Jordan,
+\emph{A random hierarchical lattice: the series--parallel graph and its properties},
+Adv. Appl. Probab. \textbf{36} (2004), 824--838.
+\href{https://doi.org/10.1239/aap/1093962236}{doi:10.1239/aap/1093962236}.
+
+\end{thebibliography}
+
+\end{document}
