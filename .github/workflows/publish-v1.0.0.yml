@@ -1,0 +1,82 @@
+name: Publish immutable v1.0.0
+
+on:
+  push:
+    branches: [main]
+    paths:
+      - .github/workflows/publish-v1.0.0.yml
+
+permissions:
+  contents: write
+
+jobs:
+  release:
+    name: Publish v1.0.0
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    steps:
+      - name: Check out exact release commit
+        uses: actions/checkout@11d5960a326750d5838078e36cf38b85af677262
+
+      - name: Verify repository and deterministic evidence
+        run: bash scripts/verify_public_repo.sh
+
+      - name: Stage and hash-check immutable assets
+        shell: bash
+        run: |
+          set -euo pipefail
+          mkdir -p dist
+          cp paper/manuscript.pdf dist/random-series-parallel-distance-exponent-v1.0.0.pdf
+          cp paper/manuscript.tex dist/random-series-parallel-distance-exponent-v1.0.0.tex
+          cp paper/references.bib dist/references.bib
+          cp CITATION.cff dist/CITATION.cff
+          cp release/EVIDENCE_BUNDLE.zip dist/random-series-parallel-distance-exponent-public-evidence-v1.0.0.zip
+          cp release/RELEASE_ASSET_SHA256SUMS.txt dist/RELEASE_ASSET_SHA256SUMS.txt
+          (cd dist && sha256sum -c RELEASE_ASSET_SHA256SUMS.txt)
+
+      - name: Write release notes
+        shell: bash
+        run: |
+          cat > /tmp/release-body.md <<EOF
+          # Version 1.0.0
+
+          ## Result
+
+          For every fixed \`p in (1/2,1)\`, the random series-parallel expected-distance growth factor is the attained maximal eigenvalue of an explicit homogeneous sum/min operator on normalized quantile profiles. The same value is given by matching lower and upper Collatz--Wielandt formulas and a compatible invariant-measure variational formula.
+
+          Prior work supplies the critical endpoint \`delta(1/2)=0\`, and the all-series endpoint \`delta(1)=log 2\` is elementary. This release contributes the all-interior model-specific characterization; it does not claim a new generic nonlinear Perron--Frobenius theorem.
+
+          ## Scope and status
+
+          The mathematical audit, three priority-search lanes, exact-source PDF build, deterministic evidence verification, and page-by-page visual preflight are complete. The model-specific assembly is described as apparently new after a documented search through 2026-08-09, with moderate confidence. Absolute historical priority, human peer review, and formal verification are not claimed.
+
+          The immutable tag targets public \`main\` commit \`${GITHUB_SHA}\`. The protected release PR passed the repository-evidence and PDF-build checks at this exact tree.
+
+          ## Immutable assets
+
+          - \`random-series-parallel-distance-exponent-v1.0.0.pdf\`
+          - \`random-series-parallel-distance-exponent-v1.0.0.tex\`
+          - \`references.bib\`
+          - \`CITATION.cff\`
+          - \`RELEASE_ASSET_SHA256SUMS.txt\`
+          - \`random-series-parallel-distance-exponent-public-evidence-v1.0.0.zip\`
+
+          The checksum ledger records the exact hashes of the other five assets. The evidence ZIP is deterministic and contains its own verified manifest and SHA-256 ledger.
+
+          No DOI is claimed by this GitHub release. Any archival DOI deposit is a separate post-release action.
+          EOF
+
+      - name: Publish immutable GitHub release
+        env:
+          GH_TOKEN: ${{ github.token }}
+        shell: bash
+        run: |
+          set -euo pipefail
+          if gh release view v1.0.0 >/dev/null 2>&1; then
+            echo "v1.0.0 already exists; refusing to overwrite an immutable release" >&2
+            exit 1
+          fi
+          gh release create v1.0.0 dist/* \
+            --target "$GITHUB_SHA" \
+            --title "Version 1.0.0" \
+            --notes-file /tmp/release-body.md
