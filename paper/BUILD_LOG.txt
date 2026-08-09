@@ -7,3 +7,12 @@ nonmathematical declaration typos: the command names in the two
 `\DeclareMathOperator*` declarations lacked their leading backslashes. Both
 declarations were repaired without changing any theorem, formula, hypothesis,
 or proof step. A clean rerun is pending.
+
+That repaired source then passed the pinned private GitHub PDF workflow as
+commit `f2725bb552af6d394508fe73413713c7a08967c8` (run `31290444831`).  The
+four-page A4 artifact opened cleanly and passed the workflow's unresolved-
+reference and layout-warning checks.  Page-by-page visual inspection found one
+presentation defect: equations (11) and (12) were too tightly composed as one
+aligned display.  They were split into two equation environments without
+changing either identity, label, or any proof step.  A build of that exact
+layout-repaired source is pending.
