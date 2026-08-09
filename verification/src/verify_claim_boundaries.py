@@ -68,23 +68,46 @@ for relative, needles in required.items():
             raise SystemExit(f"missing required boundary in {relative}: {needle}")
 
 readme = (ROOT / "README.md").read_text(encoding="utf-8")
-uncommented_readme = re.sub(r"<!--.*?-->", "", readme, flags=re.DOTALL)
-badge_lines = [
-    line for line in uncommented_readme.splitlines() if "badge.svg" in line
-]
-if len(badge_lines) != 2:
-    raise SystemExit(f"expected exactly two visible README badges, found {len(badge_lines)}")
-for workflow in ("verify.yml", "pdf.yml"):
-    expected = f"actions/workflows/{workflow}/badge.svg?branch=main"
-    target = f"actions/workflows/{workflow})"
-    if not any(expected in line and target in line for line in badge_lines):
-        raise SystemExit(f"missing visible public-main badge and target: {workflow}")
-if any(
-    token in line.lower()
-    for line in badge_lines
-    for token in ("lean", "aristotle", "doi")
-):
-    raise SystemExit("unauthorized Lean, Aristotle, or DOI badge displayed")
+allowed_badges = {
+    "verify.yml": (
+        "[![Verify public evidence](https://github.com/DannyExperiments/"
+        "random-series-parallel-distance-exponent/actions/workflows/verify.yml/"
+        "badge.svg?branch=main)](https://github.com/DannyExperiments/"
+        "random-series-parallel-distance-exponent/actions/workflows/verify.yml)"
+    ),
+    "pdf.yml": (
+        "[![PDF build](https://github.com/DannyExperiments/"
+        "random-series-parallel-distance-exponent/actions/workflows/pdf.yml/"
+        "badge.svg?branch=main)](https://github.com/DannyExperiments/"
+        "random-series-parallel-distance-exponent/actions/workflows/pdf.yml)"
+    ),
+}
+
+
+def verify_visible_readme_images(readme_text: str) -> None:
+    uncommented = re.sub(r"<!--.*?-->", "", readme_text, flags=re.DOTALL)
+    for workflow, badge in allowed_badges.items():
+        if uncommented.count(badge) != 1:
+            raise SystemExit(f"missing or duplicated authorized badge: {workflow}")
+
+    # Enforce an exact allowlist of complete, visible badge tokens rather than
+    # trying to recognize badge providers or filename conventions.  After the
+    # two approved image-plus-target tokens are removed, any remaining
+    # Markdown image opener catches inline, reference-style,
+    # collapsed-reference, and shortcut images; any remaining HTML <img>
+    # catches quoted or unquoted src forms.  HTML comments were removed above,
+    # so dormant examples do not count as visible.
+    unauthorized_image_surface = uncommented
+    for badge in allowed_badges.values():
+        unauthorized_image_surface = unauthorized_image_surface.replace(badge, "", 1)
+
+    if re.search(r"(?<!\\)!\[", unauthorized_image_surface):
+        raise SystemExit("README contains an unauthorized visible Markdown image token")
+    if re.search(r"<img\b", unauthorized_image_surface, flags=re.IGNORECASE):
+        raise SystemExit("README contains an unauthorized visible HTML <img> element")
+
+
+verify_visible_readme_images(readme)
 
 citation = (ROOT / "CITATION.cff").read_text(encoding="utf-8")
 if "date-released:" in citation:

@@ -1,5 +1,5 @@
 68da242b69d355219243bc96973f4a9f948381febd6175ae6910af488141de8e  CITATION.cff
-032c6096fb49a2ad8b807f7aa70d8399b7d5fcdb46db23c53999c7012ae1513f  random-series-parallel-distance-exponent-public-evidence-v1.0.0.zip
+7db7ec238572e5ce05edace07b15de16d9f9a2fee6e22592142138c4bae3c037  random-series-parallel-distance-exponent-public-evidence-v1.0.0.zip
 b7756646862ca72ca317fbf50995f1827da84bc2debb4329b362c4180fb70964  random-series-parallel-distance-exponent-v1.0.0.pdf
 64c61b552b757c2f1c3aa9030056d09f7f742c0cb2e74aed176de70da57c4796  random-series-parallel-distance-exponent-v1.0.0.tex
 bbc56040625376099bb490813ed2a8adb0556e0466d5d6158713b91cdd85cd51  references.bib
