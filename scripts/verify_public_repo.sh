@@ -14,6 +14,9 @@ required=(
   paper/CLAIM_SCOPE_AND_LIMITATIONS.md paper/SOURCE_COMPARISON.md
   paper/HOSTILE_MANUSCRIPT_AUDIT_PROMPT.md paper/BUILD.md
   paper/BUILD_STATUS.md paper/BUILD_LOG.txt paper/SOURCE_QA.md
+  paper/PDF_PREFLIGHT.md paper/manuscript.pdf
+  audits/public_safe_reports/PRIORITY_AUDIT_EXACT_RESULT_2026-08-09.md
+  audits/public_safe_reports/PRIORITY_AUDIT_ARCHITECTURE_2026-08-09.md
 )
 
 for path in "${required[@]}"; do

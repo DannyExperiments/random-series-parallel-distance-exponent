@@ -13,13 +13,13 @@ patterns. It establishes repository integrity, not mathematical correctness.
 There is no load-bearing computation. The mathematical object to inspect is
 the symbolic draft in `proof/CANONICAL_REPAIRED_PROOF_V1.md`.
 
-The designated private manuscript source is `paper/manuscript.tex`, and its
-source-level QA passes. No PDF is present. The cached-only Tectonic attempt is
-recorded in `paper/BUILD_LOG.txt`; it stopped before TeX parsing because the
-resource cache is incomplete. `paper/BUILD.md` and `.github/workflows/pdf.yml`
-define the clean-build gate. The pinned workflow uploads its PDF only as a
-short-lived private inspection artifact; a successful build does not replace
-page-by-page visual preflight or authorize a PDF badge by itself.
+The designated source is `paper/manuscript.tex`. The pinned private-branch
+workflow built the exact current source successfully in run `31290623765`.
+The retrieved artifact was frozen as `paper/manuscript.pdf` (SHA-256
+`b7756646862ca72ca317fbf50995f1827da84bc2debb4329b362c4180fb70964`),
+text-scanned, and inspected page by page; see `paper/PDF_PREFLIGHT.md`. This
+private-branch pass does not authorize a public badge. The badge is enabled
+only after the same workflow passes on the public default branch.
 
 No Lean build is currently available. The files in `formalization/` define a
 future partial target; they do not contain or claim a proof.

@@ -21,8 +21,7 @@ tectonic --only-cached --keep-logs --keep-intermediates manuscript.tex
 
 The local cached-only attempt failed before manuscript parsing because
 `tectonic-format-latex.tex` is absent from the cache. No local resource bundle
-was fetched. The pinned GitHub Actions workflow provides the separate clean
-build gate and a short-lived private PDF artifact for inspection. That build
-must produce zero unresolved citations/references and zero layout warnings,
-pass page-by-page visual inspection, and match the audited scope. No PDF badge
-is authorized before the workflow passes on the public default branch.
+was fetched. The pinned GitHub Actions workflow supplied the clean build gate.
+The exact current source passed private-branch run `31290623765`; its PDF has
+been frozen and inspected as recorded in `PDF_PREFLIGHT.md`. No PDF badge is
+authorized before the workflow passes on the public default branch.

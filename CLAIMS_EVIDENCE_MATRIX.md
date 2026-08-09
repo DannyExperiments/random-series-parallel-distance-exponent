@@ -11,10 +11,10 @@
 | The new argument proves \(\delta(1/2)=0\) | None | **False attribution; forbidden** |
 | Prior work proves \(\delta(1/2)=0\) | Primary literature identified in the source audit | Prior result |
 | \(\delta(1)=\log2\) | Deterministic all-series model | Elementary endpoint |
-| The interior characterization is apparently new through 2026-08-09 | Documented theorem-level negative search | Moderate confidence; absolute priority not established |
+| The interior characterization is apparently new through 2026-08-09 | Three documented exact-result and architecture search lanes | Moderate confidence; generic architecture is prior art; absolute priority not established |
 | The interior characterization is historically first | None | **Not established; forbidden** |
-| `paper/manuscript.tex` is the designated private candidate | Source comparison, `paper/SOURCE_QA.md`, and hostile source-level audit | Source QA `PASS`; hostile source audit `PASS`; PDF build remains a separate gate |
-| A compiled manuscript PDF has passed visual preflight | None; no PDF is present | **False; forbidden** |
+| `paper/manuscript.tex` is the designated private candidate | Source comparison, `paper/SOURCE_QA.md`, and hostile source-level audit | Source QA and hostile source audit `PASS`; exact private CI build `PASS` |
+| The frozen compiled manuscript PDF passed visual preflight | `paper/PDF_PREFLIGHT.md`; private workflow run `31290623765`; PDF SHA-256 ledger | `PASS` for the exact four-page private candidate; public-default-branch badge gate remains closed |
 | The candidate is formally verified | None | **False; forbidden** |
 | Repository verification proves the mathematics | Integrity scripts | **False; integrity only** |
 | Human peer review has occurred | None | **False; forbidden** |

@@ -1,13 +1,15 @@
 # A spectral characterization of the random series-parallel distance exponent
 
 <!--
-Activate this badge only after the repository exists publicly and the named
-workflow passes on its default branch:
+Activate these badges only after the repository exists publicly and the named
+workflows pass on its public default branch:
 
 [![Verify public evidence](https://github.com/DannyExperiments/random-series-parallel-distance-exponent/actions/workflows/verify.yml/badge.svg)](https://github.com/DannyExperiments/random-series-parallel-distance-exponent/actions/workflows/verify.yml)
+[![PDF build](https://github.com/DannyExperiments/random-series-parallel-distance-exponent/actions/workflows/pdf.yml/badge.svg)](https://github.com/DannyExperiments/random-series-parallel-distance-exponent/actions/workflows/pdf.yml)
 
 No Lean badge is authorized: no scope-matched theorem is kernel checked.
-No PDF badge is authorized: no compiled or visually inspected PDF exists.
+The PDF is compiled and visually inspected, but its badge remains hidden until
+the same workflow passes on the public default branch.
 -->
 
 This private staging repository presents a repaired proof candidate for the
@@ -57,6 +59,7 @@ new contribution here.
 
 [Exact problem and proof outline](PROBLEM_AND_PROOF.md) ·
 [Repaired proof candidate](proof/CANONICAL_REPAIRED_PROOF_V1.md) ·
+[Paper (PDF)](paper/manuscript.pdf) ·
 [Designated manuscript TeX](paper/manuscript.tex) ·
 [Status](STATUS.md) ·
 [Formalization feasibility](formalization/FORMALIZATION_FEASIBILITY.md) ·
@@ -69,20 +72,20 @@ new contribution here.
   clarifications were incorporated. A fresh hostile source-level audit then
   reconstructed the repaired current manuscript against the canonical proof
   and returned `PASS` with high confidence and no invalid inference.
-- **Priority:** a documented search through 2026-08-09 found no identical or
-  stronger all-interior model-specific characterization. The result is
-  classified as apparently new with moderate confidence, not as historically
-  first.
+- **Priority:** three documented search lanes through 2026-08-09 found no
+  identical or stronger all-interior model-specific characterization. The
+  result is classified as apparently new with moderate confidence, not as
+  historically first; generic nonlinear spectral machinery is prior art.
 - **Computation:** none is load-bearing; this is a symbolic proof candidate.
 - **Formalization:** feasibility and a small Aristotle/Lean dependency packet
   are supplied, but no theorem in this repository is kernel checked.
-- **Manuscript:** `paper/manuscript.tex` is the designated private candidate
-  and its source QA and hostile source-level audit pass. No PDF exists;
-  a clean GitHub Actions build and page-by-page visual preflight remain
-  pending.
+- **Manuscript:** the exact designated source passed the pinned private-branch
+  PDF workflow. Its four-page A4 PDF was retrieved, frozen, text-scanned, and
+  visually inspected page by page after a nonmathematical display-spacing
+  repair; preflight passed.
 - **Review:** no human specialist or journal peer review is claimed.
 
-This directory is a **private source-stage public-candidate repository**, not a public
+This directory is a **private public-candidate repository**, not a public
 release. It must not be made public until the remaining release gates listed
 in [STATUS.md](STATUS.md) are deliberately cleared and the human owner
 approves licensing, visibility, and DOI metadata.
@@ -91,9 +94,8 @@ approves licensing, visibility, and DOI metadata.
 
 - `proof/`: the exact repaired mathematical draft and scope contract.
 - `audits/public_safe_reports/`: sanitized audit status; no private receipts.
-- `paper/`: designated private manuscript TeX, source QA, exact claim-scope
-  comparison, hostile audit prompt, and local PDF-build status. No PDF is
-  present.
+- `paper/`: designated manuscript TeX and inspected PDF, source QA, exact
+  claim-scope comparison, hostile audit prompt, build record, and PDF preflight.
 - `formalization/`: feasibility, dependencies, and a narrowly scoped request.
 - `verification/`: deterministic integrity and claim-boundary checks.
 - `release/`: release notes and activation gates, with no release assets yet.

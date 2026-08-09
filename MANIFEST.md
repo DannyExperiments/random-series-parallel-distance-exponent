@@ -21,6 +21,8 @@ Generated from the sanitized allowlist. Raw/private evidence is excluded.
 - `STATUS.md`
 - `audits/README.md`
 - `audits/public_safe_reports/MATHEMATICAL_AUDIT_STATUS.md`
+- `audits/public_safe_reports/PRIORITY_AUDIT_ARCHITECTURE_2026-08-09.md`
+- `audits/public_safe_reports/PRIORITY_AUDIT_EXACT_RESULT_2026-08-09.md`
 - `audits/public_safe_reports/PRIORITY_AUDIT_STATUS.md`
 - `formalization/DEPENDENCY_MAP.md`
 - `formalization/FORMALIZATION_FEASIBILITY.md`
@@ -34,10 +36,12 @@ Generated from the sanitized allowlist. Raw/private evidence is excluded.
 - `paper/BUILD_STATUS.md`
 - `paper/CLAIM_SCOPE_AND_LIMITATIONS.md`
 - `paper/HOSTILE_MANUSCRIPT_AUDIT_PROMPT.md`
+- `paper/PDF_PREFLIGHT.md`
 - `paper/README.md`
 - `paper/SOURCE_COMPARISON.md`
 - `paper/SOURCE_QA.md`
 - `paper/manuscript.tex`
+- `paper/manuscript.pdf`
 - `paper/references.bib`
 - `proof/CANONICAL_REPAIRED_PROOF_V1.md`
 - `release/README.md`
@@ -48,8 +52,7 @@ Generated from the sanitized allowlist. Raw/private evidence is excluded.
 - `verification/logs/README.md`
 - `verification/src/verify_claim_boundaries.py`
 
-No compiled manuscript PDF is present. `SHA256SUMS.txt` hashes every regular
-file except itself. The manuscript TeX is a designated private candidate with
-source QA and hostile source-level audit `PASS`. The pinned clean-build
-workflow is configured; its first passing PDF and visual preflight remain
-pending.
+`SHA256SUMS.txt` hashes every regular file except itself. The manuscript TeX is
+a designated private candidate with source QA and hostile source-level audit
+`PASS`. The exact private-branch build and frozen four-page PDF passed visual
+preflight; its public-default-branch badge remains withheld.
