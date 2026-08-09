@@ -1,0 +1,21 @@
+# Human release checklist
+
+- [x] Exact final theorem, endpoints, and exclusions approved.
+- [x] All mathematical audit objections reconciled.
+- [x] Three independent public-source priority lanes reconciled through 2026-08-09.
+- [x] Qualified priority wording approved.
+- [x] Current exact-source PDF opened and reviewed page by page.
+- [x] Current TeX/PDF hashes match the audited private package.
+- [x] Formalization status accurately states that no kernel-checked theorem exists; no formalization badge is shown.
+- [x] Privacy and third-party redistribution scan passes.
+- [x] Authorship and author order approved as `DannyExperiments`.
+- [x] AI disclosure approved.
+- [x] License choice approved as no repository-wide reuse license; all rights reserved.
+- [x] Public repository name approved.
+- [ ] Required workflows pass on the exact private `main` tree.
+- [ ] Visibility changed to public and anonymously verified.
+- [ ] Public-`main` workflows pass and authorized badges are activated and anonymously click-tested.
+- [ ] Branch protection is confirmed on public `main`.
+- [ ] Version 1.0.0 tag, release assets, and re-downloaded hashes approved.
+- [x] DOI metadata pattern approved; minting remains after the immutable public release.
+- [ ] External problem-page notice approved.

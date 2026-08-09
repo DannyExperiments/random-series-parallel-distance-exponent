@@ -1,15 +1,22 @@
-# PROVISIONAL PRIVATE METADATA -- NOT RELEASE VALID.
-# Replace the project entity only after the human approves authorship.
 cff-version: 1.2.0
-message: "Citation metadata is provisional; do not cite until authorship and release metadata are approved."
+message: "If you use this research release, cite it using the metadata below."
 title: "A spectral characterization of the random series-parallel distance exponent"
 type: software
-version: 0.1.0-private-skeleton
+version: 1.0.0
+date-released: 2026-08-09
+repository-code: "https://github.com/DannyExperiments/random-series-parallel-distance-exponent"
 authors:
-  - name: "random-series-parallel-distance-exponent research project"
+  - name: "DannyExperiments"
 preferred-citation:
   type: article
   title: "A spectral characterization of the random series-parallel distance exponent"
   authors:
-    - name: "AUTHORS UNRESOLVED"
+    - name: "DannyExperiments"
   year: 2026
+  url: "https://github.com/DannyExperiments/random-series-parallel-distance-exponent"
+keywords:
+  - random series-parallel graphs
+  - graph distance
+  - nonlinear spectral theory
+  - Collatz-Wielandt formula
+  - quantile profiles

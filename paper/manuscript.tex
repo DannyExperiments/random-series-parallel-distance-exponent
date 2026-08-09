@@ -11,8 +11,8 @@
 \theoremstyle{remark}
 \newtheorem{remark}[theorem]{Remark}
 
-\DeclareMathOperator*{essinf}{ess\,inf}
-\DeclareMathOperator*{argmax}{arg\,max}
+\DeclareMathOperator*{\essinf}{ess\,inf}
+\DeclareMathOperator*{\argmax}{arg\,max}
 
 \title[Distance exponents]{Distance Exponents in a Random Series--Parallel Graph}
 \date{}
@@ -112,10 +112,12 @@ For a decreasing profile define
  C(Q)=2\int_0^1uQ(u)^2\,du.
 \]
 When $M(Q)=1$, the quantity $A(Q)$ is the mean of the minimum of two independent variables with quantile $Q$, so $0\le A(Q)\le1$. Directly from~\eqref{eq:HpQ},
-\begin{align}
- M(T_pQ)&=d(Q):=2p+qA(Q),\label{eq:firstmoment}\\
- S(T_pQ)&=2pS(Q)+2p+qC(Q).\label{eq:secondmoment}
-\end{align}
+\begin{equation}\label{eq:firstmoment}
+ M(T_pQ)=d(Q):=2p+qA(Q).
+\end{equation}
+\begin{equation}\label{eq:secondmoment}
+ S(T_pQ)=2pS(Q)+2p+qC(Q).
+\end{equation}
 The load-bearing anti-correlation inequality is
 \begin{equation}\label{eq:anticorr}
  C(Q)M(Q)\le A(Q)S(Q).

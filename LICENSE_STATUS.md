@@ -1,9 +1,7 @@
 # License status
 
-No license has been selected or granted for this private staging repository.
-Default copyright applies. Do not redistribute or publish this tree until the
-human owner approves authorship, license, and visibility.
+No repository-wide reuse license is granted. All rights are reserved.
 
-Third-party articles and PDFs are not included. Bibliographic references and
-short mathematical descriptions do not authorize redistribution of source
-documents.
+The mathematical statements and bibliographic facts remain subject to the
+ordinary principles governing ideas and factual information. Third-party
+articles, figures, and PDFs are not redistributed here.

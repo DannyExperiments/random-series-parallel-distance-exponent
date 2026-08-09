@@ -66,4 +66,7 @@ closed formula, or critical compactness theorem is claimed.
 
 The complete repaired argument is frozen at
 [`proof/CANONICAL_REPAIRED_PROOF_V1.md`](proof/CANONICAL_REPAIRED_PROOF_V1.md).
-Its exact bytes still require fresh post-repair audit.
+The repaired proof was reconstructed in a fresh hostile source-level audit
+against the designated manuscript and returned `PASS`, with no invalid
+inference and high confidence; see
+[`audits/public_safe_reports/MATHEMATICAL_AUDIT_STATUS.md`](audits/public_safe_reports/MATHEMATICAL_AUDIT_STATUS.md).
