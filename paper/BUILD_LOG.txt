@@ -23,3 +23,9 @@ ZIP has SHA-256 `fa15a087a02318465e6b06721059103ca379dc7f48d3ea5699658b01e18ad4c
 Its four-page A4 PDF has SHA-256
 `b7756646862ca72ca317fbf50995f1827da84bc2debb4329b362c4180fb70964` and
 passed page-by-page visual preflight. See `PDF_PREFLIGHT.md`.
+
+The unchanged designated source later passed the public-default-branch PDF
+workflow at commit `d79230cdb87d1438c97281d0c940f8e1a352642c`, run
+`31295518480`. That run authorizes the public PDF-build badge for that exact
+public commit. It does not claim byte-for-byte identity between separately
+compiled PDFs, and it does not certify the later unpushed metadata closure.

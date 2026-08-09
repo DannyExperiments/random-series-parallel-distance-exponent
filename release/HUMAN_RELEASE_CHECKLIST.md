@@ -12,10 +12,13 @@
 - [x] AI disclosure approved.
 - [x] License choice approved as no repository-wide reuse license; all rights reserved.
 - [x] Public repository name approved.
-- [ ] Required workflows pass on the exact private `main` tree.
-- [ ] Visibility changed to public and anonymously verified.
-- [ ] Public-`main` workflows pass and authorized badges are activated and anonymously click-tested.
+- [x] Repository visibility changed to public and anonymously verified.
+- [x] Both workflows passed on exact public-`main` commit `d79230cdb87d1438c97281d0c940f8e1a352642c`.
+- [x] Both public-main badge images and both workflow target pages were anonymously click-tested.
+- [x] Exactly the verify and PDF badges are activated in this local closure tree.
+- [ ] This metadata/evidence closure is merged, both workflows re-pass on its exact public-`main` commit, and the displayed badges are re-tested anonymously there.
 - [ ] Branch protection is confirmed on public `main`.
-- [ ] Version 1.0.0 tag, release assets, and re-downloaded hashes approved.
+- [ ] Version 1.0.0 tag and GitHub release are created from the final audited assets.
+- [ ] Every published release asset is re-downloaded and its SHA-256 hash matches the final release ledger.
 - [x] DOI metadata pattern approved; minting remains after the immutable public release.
 - [ ] External problem-page notice approved.

@@ -13,8 +13,10 @@
 | \(\delta(1)=\log2\) | Deterministic all-series model | Elementary endpoint |
 | The interior characterization is apparently new through 2026-08-09 | Three documented exact-result and architecture search lanes | Moderate confidence; generic architecture is prior art; absolute priority not established |
 | The interior characterization is historically first | None | **Not established; forbidden** |
-| `paper/manuscript.tex` is the designated release source | Source comparison, `paper/SOURCE_QA.md`, and hostile source-level audit | Source QA and hostile source audit `PASS`; exact private CI build `PASS` |
-| The frozen compiled manuscript PDF passed visual preflight | `paper/PDF_PREFLIGHT.md`; private workflow run `31290623765`; PDF SHA-256 ledger | `PASS` for the exact four-page manuscript; public-default-branch badge gate remains closed |
+| `paper/manuscript.tex` is the designated release source | Source comparison, `paper/SOURCE_QA.md`, hostile source-level audit, and public PDF workflow run `31295518480` | Source QA and hostile source audit `PASS`; private and public-default-branch builds `PASS` |
+| The frozen compiled manuscript PDF passed visual preflight | `paper/PDF_PREFLIGHT.md`; private workflow run `31290623765`; PDF SHA-256 ledger | `PASS` for the exact four-page frozen manuscript; the public-default-branch PDF workflow also passed and its badge is active |
+| Public `main` passed both repository workflows | Public runs `31295518511` and `31295518480` at commit `d79230cdb87d1438c97281d0c940f8e1a352642c`; anonymous badge tests | Exact pass for that public commit; the later local metadata closure must re-run CI after merge |
+| An immutable Version 1.0.0 release or DOI exists | None | **Not yet; forbidden until tag/release publication, asset re-download verification, and DOI resolution** |
 | The theorem is formally verified | None | **False; forbidden** |
 | Repository verification proves the mathematics | Integrity scripts | **False; integrity only** |
 | Human peer review has occurred | None | **False; forbidden** |

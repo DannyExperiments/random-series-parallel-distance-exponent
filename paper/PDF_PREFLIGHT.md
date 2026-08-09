@@ -19,7 +19,10 @@ SEARCHABLE_TEXT: PASS
 PRIVATE_TEXT_SCAN: PASS
 PAGE_BY_PAGE_VISUAL_INSPECTION: PASS
 FONT_EMBEDDING: NOT_INDEPENDENTLY_CHECKED
-PUBLIC_DEFAULT_BRANCH_BADGE: WITHHELD
+PUBLIC_DEFAULT_BRANCH_COMMIT: d79230cdb87d1438c97281d0c940f8e1a352642c
+PUBLIC_DEFAULT_BRANCH_PDF_RUN: 31295518480
+PUBLIC_DEFAULT_BRANCH_PDF_STATUS: PASS
+PUBLIC_DEFAULT_BRANCH_BADGE: ACTIVE_AND_ANONYMOUSLY_TESTED
 ```
 
 All four pages were rendered at high resolution and inspected after the
@@ -29,6 +32,8 @@ whitespace, or unreadable reference was found. The extracted text contains no
 local absolute path, private chat URL, email address, placeholder marker, or
 internal attachment identifier.
 
-This is a private-branch manuscript preflight. It does not by itself authorize
-a public badge, public release, DOI, peer-review claim, or formal-verification
-claim.
+The page-by-page preflight originated from the frozen private-branch artifact.
+The unchanged source subsequently passed the public-default-branch PDF
+workflow, authorizing the displayed PDF badge after anonymous testing. Neither
+the preflight nor the workflow run authorizes an immutable release, DOI,
+peer-review claim, or formal-verification claim.

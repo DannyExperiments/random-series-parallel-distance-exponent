@@ -10,8 +10,10 @@ Source-level formatting, scope, and privacy QA pass. The pinned private-branch
 workflow built the exact current source; `manuscript.pdf` is the retrieved,
 frozen four-page A4 artifact and passed page-by-page visual preflight. The
 local cached-only Tectonic attempt remains documented as an environment-only
-failure. Public-default-branch CI and anonymous badge testing remain separate
-release gates.
+failure. The unchanged source later passed public-default-branch run
+`31295518480` at commit `d79230cdb87d1438c97281d0c940f8e1a352642c`, and the
+PDF badge was anonymously tested. The later metadata/evidence closure still
+requires its own post-merge run; the immutable release and DOI remain pending.
 
 Read `CLAIM_SCOPE_AND_LIMITATIONS.md`, `SOURCE_COMPARISON.md`, `SOURCE_QA.md`,
 and `BUILD_STATUS.md` for the exact scope and build record. The

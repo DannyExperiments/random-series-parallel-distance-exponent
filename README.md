@@ -1,14 +1,11 @@
 # A spectral characterization of the random series-parallel distance exponent
 
-<!--
-Activate these badges only after the named workflows pass on public `main`
-and both the badge image and target are anonymously click-tested:
-
 [![Verify public evidence](https://github.com/DannyExperiments/random-series-parallel-distance-exponent/actions/workflows/verify.yml/badge.svg?branch=main)](https://github.com/DannyExperiments/random-series-parallel-distance-exponent/actions/workflows/verify.yml)
 [![PDF build](https://github.com/DannyExperiments/random-series-parallel-distance-exponent/actions/workflows/pdf.yml/badge.svg?branch=main)](https://github.com/DannyExperiments/random-series-parallel-distance-exponent/actions/workflows/pdf.yml)
 
-No Lean badge is authorized: no scope-matched theorem is kernel checked.
--->
+No Lean or Aristotle badge is authorized: no scope-matched theorem is kernel
+checked. No DOI badge is authorized before an immutable release is archived
+and its DOI resolves.
 
 [Paper production status](paper/README.md) ·
 [Paper PDF](paper/manuscript.pdf) ·
@@ -89,16 +86,19 @@ new contribution here.
 - **Computation:** none is load-bearing; the proof is symbolic.
 - **Formalization:** feasibility and a small Aristotle/Lean dependency packet
   are supplied, but no theorem in this repository is kernel checked.
-- **Manuscript:** the exact designated source passed the pinned private-branch
-  PDF workflow. Its four-page A4 PDF was retrieved, frozen, text-scanned, and
-  visually inspected page by page after a nonmathematical display-spacing
-  repair; preflight passed.
+- **Manuscript:** the exact designated source passed both the pinned
+  private-branch PDF workflow and the public-`main` PDF workflow. Its four-page
+  A4 PDF was retrieved, frozen, text-scanned, and visually inspected page by
+  page after a nonmathematical display-spacing repair; preflight passed.
 - **Review:** no human specialist or journal peer review is claimed.
 
-The repository has passed its private mathematical, source, PDF, privacy, and
-reproducibility gates. Public visibility, public-`main` workflow confirmation,
-badge activation, an immutable release, and DOI deposit remain distinct steps;
-see [STATUS.md](STATUS.md).
+The repository is publicly accessible. At public-`main` commit
+`d79230cdb87d1438c97281d0c940f8e1a352642c`, both named workflows passed and
+both badge images and targets were tested anonymously. This local
+metadata/evidence closure is a later, unpushed tree and must pass the same two
+workflows after merge. Branch-protection confirmation, an immutable Version
+1.0.0 tag and release, release-asset re-download verification, and DOI deposit
+remain distinct gates; see [STATUS.md](STATUS.md).
 
 ## Repository map
 
@@ -113,11 +113,13 @@ see [STATUS.md](STATUS.md).
 
 ## Automation badges
 
-The repository includes workflows for evidence/integrity verification and
-clean PDF reconstruction. Their badges remain deliberately withheld until the
-workflows pass on public `main` and are anonymously click-tested. Activation
-instructions are in
-[`release/BADGE_ACTIVATION.md`](release/BADGE_ACTIVATION.md).
+The two displayed badges report evidence/integrity verification and clean PDF
+reconstruction on public `main`. Both workflows passed at commit
+`d79230cdb87d1438c97281d0c940f8e1a352642c`; their badge images and target
+pages were anonymously tested. The exact activation record and the required
+post-merge recheck are in
+[`release/BADGE_ACTIVATION.md`](release/BADGE_ACTIVATION.md). No Lean,
+Aristotle, or DOI badge is displayed.
 
 ## Authorship, citation, and licensing
 
