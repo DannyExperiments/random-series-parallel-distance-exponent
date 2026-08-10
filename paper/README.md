@@ -12,8 +12,10 @@ frozen four-page A4 artifact and passed page-by-page visual preflight. The
 local cached-only Tectonic attempt remains documented as an environment-only
 failure. The unchanged source later passed public-default-branch run
 `31295518480` at commit `d79230cdb87d1438c97281d0c940f8e1a352642c`, and the
-PDF badge was anonymously tested. The later metadata/evidence closure still
-requires its own post-merge run; the immutable release and DOI remain pending.
+PDF badge was anonymously tested. The unchanged source was archived in
+immutable Version 1.0.0 and at version DOI `10.5281/zenodo.21875135`; all
+archived manuscript bytes match the GitHub release assets. This post-DOI
+metadata update does not modify the manuscript.
 
 Read `CLAIM_SCOPE_AND_LIMITATIONS.md`, `SOURCE_COMPARISON.md`, `SOURCE_QA.md`,
 and `BUILD_STATUS.md` for the exact scope and build record. The

@@ -46,6 +46,7 @@ Generated from the sanitized allowlist. Raw/private evidence is excluded.
 - `paper/references.bib`
 - `proof/CANONICAL_REPAIRED_PROOF_V1.md`
 - `release/BADGE_ACTIVATION.md`
+- `release/DOI_DEPOSIT.md`
 - `release/HUMAN_RELEASE_CHECKLIST.md`
 - `release/README.md`
 - `release/EVIDENCE_BUNDLE.sha256`
@@ -67,5 +68,6 @@ preflight. The same source passed the public-default-branch PDF workflow, and
 the verify and PDF badges were activated after anonymous testing. The release
 workflow requires both final-`main` checks at the exact tag target, publishes
 only the allowlisted hash-checked assets, and verifies the immutable release,
-tag target, and re-downloaded assets. The immutable release and DOI remain
-pending until that workflow completes.
+tag target, and re-downloaded assets. Version 1.0.0 is published at commit
+`f88c264981224c2e2b28478564e2b5db82668d4d`; its six assets are archived at
+version DOI `10.5281/zenodo.21875135` and match the Zenodo files byte for byte.

@@ -34,6 +34,7 @@ internal attachment identifier.
 
 The page-by-page preflight originated from the frozen private-branch artifact.
 The unchanged source subsequently passed the public-default-branch PDF
-workflow, authorizing the displayed PDF badge after anonymous testing. Neither
-the preflight nor the workflow run authorizes an immutable release, DOI,
-peer-review claim, or formal-verification claim.
+workflow, authorizing the displayed PDF badge after anonymous testing. The
+same PDF bytes were published in immutable Version 1.0.0 and archived at
+version DOI `10.5281/zenodo.21875135`; file parity passed. None of those facts
+implies peer review or formal verification.

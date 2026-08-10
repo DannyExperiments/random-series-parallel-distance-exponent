@@ -1,3 +1,4 @@
+import hashlib
 import re
 from pathlib import Path
 
@@ -10,20 +11,20 @@ required = {
         "belongs to prior work",
         "fresh hostile source-level audit",
         "No Lean or Aristotle badge is authorized",
+        "10.5281/zenodo.21875135",
         "exact designated source",
         "visually inspected page by",
         "f5c3e0bb888a4e4b796b90729a6fc1cfa0581e96",
         "immutable Version",
     ],
     "STATUS.md": [
-        "PUBLIC_MAIN_CI_PASS_RELEASE_PENDING",
-        "PRE_RELEASE_METADATA_REPAIR_RUNNING",
+        "DOI_DEPOSITED",
+        "POST_DOI_METADATA_CLOSURE",
         "PASS_HIGH_CONFIDENCE",
         "PRIORITY_AUDIT_PASS_QUALIFIED",
         "FORMALIZATION_NOT_ATTEMPTED",
         "MANUSCRIPT_PASS",
-        "IMMUTABLE_RELEASE_PENDING",
-        "DOI_PENDING",
+        "PUBLIC_TIMESTAMPED",
         "ALL_RIGHTS_RESERVED",
     ],
     "CLAIMS_EVIDENCE_MATRIX.md": [
@@ -44,7 +45,8 @@ required = {
     ],
     "CITATION.cff": [
         "version: 1.0.0",
-        "date-released: 2026-08-09",
+        "date-released: 2026-08-10",
+        'doi: "10.5281/zenodo.21875135"',
         'name: "DannyExperiments"',
     ],
     "LICENSE_STATUS.md": [
@@ -52,13 +54,19 @@ required = {
     ],
     "release/HUMAN_RELEASE_CHECKLIST.md": [
         "Repository visibility changed to public and anonymously verified.",
-        "passes both workflows on its exact PR head",
+        "passed both workflows on its exact PR head",
         "all rights reserved.",
     ],
     "release/RELEASE_NOTES_v1.0.0.md": [
         "Release notes for Version 1.0.0",
         "p\\in(1/2,1)",
         "immutable Version 1.0.0 tag and GitHub release",
+    ],
+    "release/DOI_DEPOSIT.md": [
+        "10.5281/zenodo.21875135",
+        "10.5281/zenodo.21875134",
+        "f88c264981224c2e2b28478564e2b5db82668d4d",
+        "All six files were anonymously downloaded",
     ],
 }
 
@@ -82,6 +90,10 @@ allowed_badges = {
         "badge.svg?branch=main)](https://github.com/DannyExperiments/"
         "random-series-parallel-distance-exponent/actions/workflows/pdf.yml)"
     ),
+    "doi": (
+        "[![DOI](https://zenodo.org/badge/DOI/10.5281/"
+        "zenodo.21875135.svg)](https://doi.org/10.5281/zenodo.21875135)"
+    ),
 }
 
 
@@ -93,7 +105,7 @@ def verify_visible_readme_images(readme_text: str) -> None:
 
     # Enforce an exact allowlist of complete, visible badge tokens rather than
     # trying to recognize badge providers or filename conventions.  After the
-    # two approved image-plus-target tokens are removed, any remaining
+    # three approved image-plus-target tokens are removed, any remaining
     # Markdown image opener catches inline, reference-style,
     # collapsed-reference, and shortcut images; any remaining HTML <img>
     # catches quoted or unquoted src forms.  HTML comments were removed above,
@@ -115,8 +127,36 @@ def verify_visible_readme_images(readme_text: str) -> None:
 verify_visible_readme_images(readme)
 
 citation = (ROOT / "CITATION.cff").read_text(encoding="utf-8")
-if "date-released: 2026-08-09" not in citation:
-    raise SystemExit("Version 1.0.0 CITATION.cff must record the release date")
+if "date-released: 2026-08-10" not in citation:
+    raise SystemExit("current-main CITATION.cff must record the actual release date")
+if 'doi: "10.5281/zenodo.21875135"' not in citation:
+    raise SystemExit("CITATION.cff must record the Version 1.0.0 DOI")
+
+
+def digest(relative: str) -> str:
+    return hashlib.sha256((ROOT / relative).read_bytes()).hexdigest()
+
+
+immutable_hashes = {
+    "release/RELEASE_ASSET_SHA256SUMS.txt":
+        "264254aa4e81f4cfaa2ee69f7aa0660d078231c8ced55d282bcff5033cd007be",
+    "release/RELEASE_NOTES_v1.0.0.md":
+        "827036f1ec850871672fa287f22e2f33d0ec75d60ba537a2ae6c40d5896f6a1d",
+    "paper/manuscript.pdf":
+        "b7756646862ca72ca317fbf50995f1827da84bc2debb4329b362c4180fb70964",
+    "paper/manuscript.tex":
+        "64c61b552b757c2f1c3aa9030056d09f7f742c0cb2e74aed176de70da57c4796",
+    "paper/references.bib":
+        "bbc56040625376099bb490813ed2a8adb0556e0466d5d6158713b91cdd85cd51",
+    "proof/CANONICAL_REPAIRED_PROOF_V1.md":
+        "19e1a565f0db943dea5ecb8b0e25eceb6a8c670c996265cd9a78b859d8666077",
+}
+for relative, expected in immutable_hashes.items():
+    actual = digest(relative)
+    if actual != expected:
+        raise SystemExit(
+            f"immutable mathematical/release artifact changed: {relative}: {actual}"
+        )
 
 forbidden = [
     "we prove delta(1/2)=0",

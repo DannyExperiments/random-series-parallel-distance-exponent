@@ -27,5 +27,8 @@ The exact current source passed private-branch run `31290623765`; its PDF has
 been frozen and inspected as recorded in `PDF_PREFLIGHT.md`. The identical
 source passed public-`main` run `31295518480` at commit
 `d79230cdb87d1438c97281d0c940f8e1a352642c`; the PDF badge was then activated
-and anonymously tested. The later metadata/evidence closure must re-pass its
-own post-merge workflow.
+and anonymously tested. The unchanged PDF and TeX were later published in
+immutable Version 1.0.0 at commit
+`f88c264981224c2e2b28478564e2b5db82668d4d` and archived at version DOI
+`10.5281/zenodo.21875135`. This metadata-only closure must re-pass the PDF
+workflow without changing either file.
