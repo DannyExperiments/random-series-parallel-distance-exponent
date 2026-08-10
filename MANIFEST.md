@@ -4,6 +4,7 @@ Generated from the sanitized allowlist. Raw/private evidence is excluded.
 
 - `.gitattributes`
 - `.github/workflows/pdf.yml`
+- `.github/workflows/publish-v1.0.0.yml`
 - `.github/workflows/verify.yml`
 - `.gitignore`
 - `AI_DISCLOSURE.md`
@@ -62,7 +63,9 @@ Generated from the sanitized allowlist. Raw/private evidence is excluded.
 `SHA256SUMS.txt` hashes every regular file except itself. The manuscript TeX is
 the designated release source and has source QA and hostile source-level audit
 `PASS`. The exact private-branch build and frozen four-page PDF passed visual
-preflight. The same source passed the public-default-branch PDF workflow at
-commit `d79230cdb87d1438c97281d0c940f8e1a352642c`, and the verify and PDF badges
-were activated after anonymous testing. The immutable release and DOI remain
-pending.
+preflight. The same source passed the public-default-branch PDF workflow, and
+the verify and PDF badges were activated after anonymous testing. The release
+workflow requires both final-`main` checks at the exact tag target, publishes
+only the allowlisted hash-checked assets, and verifies the immutable release,
+tag target, and re-downloaded assets. The immutable release and DOI remain
+pending until that workflow completes.
