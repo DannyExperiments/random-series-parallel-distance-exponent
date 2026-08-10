@@ -23,6 +23,11 @@ PUBLIC_DEFAULT_BRANCH_PDF_JOB: Rebuild manuscript PDF
 PUBLIC_DEFAULT_BRANCH_PDF_STATUS: PASS
 PUBLIC_DEFAULT_BRANCH_BADGE_ELIGIBLE: YES
 PUBLIC_DEFAULT_BRANCH_BADGE_ANONYMOUS_TEST: PASS
+IMMUTABLE_RELEASE_TAG: v1.0.0
+IMMUTABLE_RELEASE_COMMIT: f88c264981224c2e2b28478564e2b5db82668d4d
+IMMUTABLE_RELEASE_PUBLISHED_AT: 2026-08-10T14:42:50Z
+VERSION_DOI: 10.5281/zenodo.21875135
+DOI_FILE_PARITY: PASS_ALL_6_ASSETS
 ```
 
 The cached-only attempt stopped before parsing the manuscript because the
@@ -38,5 +43,6 @@ Its four-page A4 artifact was retrieved, frozen, and inspected page by page;
 no clipping, overlap, malformed display, or unreadable glyph was found. The
 unchanged source later passed the public-default-branch workflow at the commit
 and run recorded above, after which the PDF badge image and target were tested
-anonymously. That public run does not claim byte identity between separately
-compiled PDFs and does not certify this later unpushed metadata closure.
+anonymously. The immutable Version 1.0.0 PDF was subsequently archived at the
+version DOI and matched byte for byte. This post-DOI update changes metadata
+only and does not modify the manuscript or frozen PDF.

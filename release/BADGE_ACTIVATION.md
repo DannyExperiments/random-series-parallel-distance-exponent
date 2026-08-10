@@ -1,9 +1,10 @@
 # Badge activation record
 
-The README in this local closure tree displays exactly two badges:
+The README in this post-DOI closure tree displays exactly three badges:
 
 - `Verify public evidence` for `.github/workflows/verify.yml`; and
-- `PDF build` for `.github/workflows/pdf.yml`.
+- `PDF build` for `.github/workflows/pdf.yml`; and
+- `DOI` for the immutable Version 1.0.0 archive.
 
 Activation gate: `PASS` for the exact pre-release public-`main` base commit
 `f5c3e0bb888a4e4b796b90729a6fc1cfa0581e96`.
@@ -14,11 +15,12 @@ Activation gate: `PASS` for the exact pre-release public-`main` base commit
 - Anonymous target-page test: `PASS` for both workflow links.
 - Branch binding: explicit `branch=main` in each badge image URL.
 
-The metadata-only release repair must pass both workflows on its exact PR head
-before merge and tagging. The public `main` badge images and targets must be
-rechecked after that protected merge.
+The post-DOI metadata-only PR must pass both workflows on its exact head before
+protected merge. The public `main` badge images and targets must be rechecked
+after that merge.
 
-No Lean or Aristotle badge is authorized. The repository contains only a
-formalization-feasibility report and request packet; no scope-matched theorem
-has been rebuilt and kernel checked. No DOI badge is authorized until a DOI
-resolves to hash-verified immutable release assets.
+The DOI badge, version DOI `10.5281/zenodo.21875135`, concept DOI
+`10.5281/zenodo.21875134`, and Zenodo record returned HTTP 200 anonymously.
+All six Zenodo files match the immutable GitHub release assets. No Lean or
+Aristotle badge is authorized: no scope-matched theorem has been rebuilt and
+kernel checked.

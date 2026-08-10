@@ -20,6 +20,7 @@ required=(
   scripts/build_evidence_bundle.py scripts/update_hashes.py
   release/EVIDENCE_BUNDLE.zip release/EVIDENCE_BUNDLE.sha256
   release/RELEASE_ASSET_SHA256SUMS.txt
+  release/DOI_DEPOSIT.md
   release/BADGE_ACTIVATION.md release/HUMAN_RELEASE_CHECKLIST.md
   release/RELEASE_NOTES_v1.0.0.md
 )

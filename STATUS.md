@@ -1,10 +1,10 @@
 # Status
 
-Status date: 2026-08-09.
+Status date: 2026-08-10.
 
-Current state: `PUBLIC_MAIN_CI_PASS_RELEASE_PENDING`.
+Current state: `DOI_DEPOSITED`.
 
-Public repository gate: `PRE_RELEASE_METADATA_REPAIR_RUNNING`.
+Public repository gate: `POST_DOI_METADATA_CLOSURE`.
 
 | Dimension | State | Exact meaning |
 |---|---|---|
@@ -19,28 +19,21 @@ Public repository gate: `PRE_RELEASE_METADATA_REPAIR_RUNNING`.
 | Formalization | `FORMALIZATION_NOT_ATTEMPTED` | A dependency report and request packet exist; no Lean theorem has been proved. |
 | Human review | `PENDING` | No specialist or journal referee report is claimed. |
 | Repository visibility | `PUBLIC_ANONYMOUS_ACCESS_PASS` | The repository and its default `main` branch were opened successfully without authentication. |
-| Public-main CI | `PASS_AT_F5C3E0B` | `Verify public evidence` run `31302269010` and `PDF build` run `31302269014` passed at the exact pre-release public-`main` base commit `f5c3e0bb888a4e4b796b90729a6fc1cfa0581e96`. The metadata-only repair head must pass the same two checks before merge and release. |
-| Automation badges | `ACTIVE_PUBLIC_MAIN_PASS` | Exactly the verify and PDF badges are displayed in this closure tree; both image URLs and target pages were anonymously tested against public `main`. No Lean, Aristotle, or DOI badge is authorized. |
+| Public-main CI | `PASS_RELEASE_AND_METADATA_GATED` | Both required workflows passed before the immutable Version 1.0.0 release. This post-DOI metadata-only update must pass the same checks on its exact PR head and final protected `main`. |
+| Automation badges | `ACTIVE_PUBLIC_MAIN_AND_DOI` | Verify and PDF badges report public `main`; the DOI badge resolves to the hash-verified Version 1.0.0 archive. No Lean or Aristotle badge is authorized. |
 | Branch protection | `CONFIRMED_ACTIVE` | Authenticated GitHub settings show protection for `main`, with pull requests, the two required status checks, up-to-date branches, conversation resolution, linear history, administrator non-bypass, and force-push/deletion prevention enabled. |
-| Publication | `IMMUTABLE_RELEASE_PENDING` | No Version 1.0.0 tag or GitHub release has been created, and no release asset has been re-downloaded from an immutable release. |
-| DOI | `DOI_PENDING` | No DOI has been deposited or claimed. |
+| Publication | `PUBLIC_TIMESTAMPED` | Immutable Version 1.0.0 is published at tag `v1.0.0`, targeting commit `f88c264981224c2e2b28478564e2b5db82668d4d`; all six release assets were re-downloaded and hash-verified. |
+| DOI | `DOI_DEPOSITED` | Version DOI `10.5281/zenodo.21875135` and concept DOI `10.5281/zenodo.21875134` are published and resolve; all six Zenodo files match the immutable GitHub assets. |
 | Authorship | `DANNYEXPERIMENTS_APPROVED` | Citation metadata follows the owner's established public convention. |
 | License | `ALL_RIGHTS_RESERVED` | No repository-wide reuse license is granted. |
 
-## Remaining release steps
+## Remaining release step
 
-1. Require both workflows to pass on the exact metadata-repair PR head, then
-   review and merge it through the protected branch.
-2. Create the immutable Version 1.0.0 tag and GitHub release from the exact
-   audited assets, then re-download every asset and verify its SHA-256 hash.
-3. Only after that verification, advance to `PUBLIC_TIMESTAMPED_NO_DOI`.
-4. Deposit and resolve the DOI, then add it in a metadata-only protected
-   update.
-5. Obtain separate approval before any external problem-page notice.
+Obtain separate approval before any external problem-page notice.
 
 Current machine state: `PASS_HIGH_CONFIDENCE`,
 `PRIORITY_AUDIT_PASS_QUALIFIED`, `MANUSCRIPT_PASS`, and
-`PUBLIC_MAIN_CI_PASS_RELEASE_PENDING`, with public visibility, CI, and branch
-protection independently
-recorded as above. None may be strengthened merely because this repository's
-integrity check passes. No Lean or Aristotle badge is authorized.
+`DOI_DEPOSITED`, with public visibility, protected CI, immutable release,
+asset parity, and DOI resolution independently recorded as above. None may be
+strengthened merely because this repository's integrity check passes. No Lean
+or Aristotle badge is authorized.

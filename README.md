@@ -2,10 +2,10 @@
 
 [![Verify public evidence](https://github.com/DannyExperiments/random-series-parallel-distance-exponent/actions/workflows/verify.yml/badge.svg?branch=main)](https://github.com/DannyExperiments/random-series-parallel-distance-exponent/actions/workflows/verify.yml)
 [![PDF build](https://github.com/DannyExperiments/random-series-parallel-distance-exponent/actions/workflows/pdf.yml/badge.svg?branch=main)](https://github.com/DannyExperiments/random-series-parallel-distance-exponent/actions/workflows/pdf.yml)
+[![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.21875135.svg)](https://doi.org/10.5281/zenodo.21875135)
 
 No Lean or Aristotle badge is authorized: no scope-matched theorem is kernel
-checked. No DOI badge is authorized before an immutable release is archived
-and its DOI resolves.
+checked.
 
 [Paper production status](paper/README.md) ·
 [Paper PDF](paper/manuscript.pdf) ·
@@ -18,7 +18,18 @@ and its DOI resolves.
 [Evidence bundle](release/EVIDENCE_BUNDLE.zip) ·
 [Formalization status](formalization/README.md) ·
 [Release notes](release/RELEASE_NOTES_v1.0.0.md) ·
+[Version 1.0.0](https://github.com/DannyExperiments/random-series-parallel-distance-exponent/releases/tag/v1.0.0) ·
+[DOI deposit](release/DOI_DEPOSIT.md) ·
 [Citation](CITATION.cff)
+
+The immutable Version 1.0.0 release targets commit
+`f88c264981224c2e2b28478564e2b5db82668d4d` and was published on
+2026-08-10. Its six audited assets are archived at the
+[version DOI](https://doi.org/10.5281/zenodo.21875135), with
+[concept DOI](https://doi.org/10.5281/zenodo.21875134); all six Zenodo files
+match the immutable GitHub release assets byte for byte. The release tag,
+assets, theorem, manuscript, PDF, proof, and scope are unchanged by this
+post-release metadata update. An external problem-page notice remains pending.
 
 Itai Benjamini's Question 9.6 asks for the shape of the expected-distance
 exponent in a random hierarchical series-parallel graph. For every fixed
@@ -92,13 +103,11 @@ new contribution here.
   page after a nonmathematical display-spacing repair; preflight passed.
 - **Review:** no human specialist or journal peer review is claimed.
 
-The repository is publicly accessible. At the exact pre-release base commit
-`f5c3e0bb888a4e4b796b90729a6fc1cfa0581e96`, `Verify public evidence` run
-`31302269010` and `PDF build` run `31302269014` passed. Both badge images and
-targets were then tested anonymously and reported the public `main` branch as
-passing. Branch protection is active on `main`; an immutable Version 1.0.0 tag
-and release, release-asset re-download verification, and DOI deposit remain
-distinct gates; see [STATUS.md](STATUS.md).
+The repository is publicly accessible. Both default-branch workflows passed
+before the immutable Version 1.0.0 release was published, and branch
+protection remains active on `main`. The immutable release and DOI-file parity
+are recorded in [STATUS.md](STATUS.md) and
+[release/DOI_DEPOSIT.md](release/DOI_DEPOSIT.md).
 
 ## Repository map
 
@@ -118,9 +127,18 @@ reconstruction on public `main`. Both workflows passed at the exact
 pre-release base commit `f5c3e0bb888a4e4b796b90729a6fc1cfa0581e96` in
 runs `31302269010` and `31302269014`; their badge images and target pages were
 anonymously tested. The exact activation record and the required release-head
-recheck are in
-[`release/BADGE_ACTIVATION.md`](release/BADGE_ACTIVATION.md). No Lean,
-Aristotle, or DOI badge is displayed.
+recheck are in [`release/BADGE_ACTIVATION.md`](release/BADGE_ACTIVATION.md).
+The DOI badge, version DOI, concept DOI, and record were anonymously checked
+after deposit. No Lean or Aristotle badge is displayed.
+
+## Citation
+
+Cite the immutable Version 1.0.0 archive using
+[`10.5281/zenodo.21875135`](https://doi.org/10.5281/zenodo.21875135). The
+collection-level identifier for all versions is
+[`10.5281/zenodo.21875134`](https://doi.org/10.5281/zenodo.21875134). The root
+[`CITATION.cff`](CITATION.cff) supplies the same preferred version citation to
+GitHub's **Cite this repository** control.
 
 ## Authorship, citation, and licensing
 

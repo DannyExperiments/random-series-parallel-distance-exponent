@@ -16,9 +16,9 @@
 - [x] Both workflows passed on exact pre-release public-`main` base commit `f5c3e0bb888a4e4b796b90729a6fc1cfa0581e96`.
 - [x] Both public-main badge images and both workflow target pages were anonymously click-tested.
 - [x] Exactly the verify and PDF badges are activated in this local closure tree.
-- [ ] The metadata-only release repair passes both workflows on its exact PR head, is merged through protected `main`, and the displayed badges are re-tested anonymously there.
+- [x] The metadata-only release repair passed both workflows on its exact PR head, was merged through protected `main`, and the displayed workflow badges were re-tested anonymously there.
 - [x] Branch protection is confirmed on public `main`.
-- [ ] Version 1.0.0 tag and GitHub release are created from the final audited assets.
-- [ ] Every published release asset is re-downloaded and its SHA-256 hash matches the final release ledger.
-- [x] DOI metadata pattern approved; minting remains after the immutable public release.
+- [x] Version 1.0.0 tag and GitHub release were created from the final audited assets.
+- [x] Every published release asset was re-downloaded and its SHA-256 hash matches the frozen release ledger.
+- [x] DOI metadata was approved, minted, resolved, and checked against all six immutable release assets.
 - [ ] External problem-page notice approved.
